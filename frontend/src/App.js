@@ -1,5 +1,5 @@
 import "./App.css";
-import Toggle from "./Toggle";
+import Toggle from "./components/Toggle";
 
 function App() {
   return (
