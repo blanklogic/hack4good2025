@@ -1,13 +1,13 @@
-import { React, useState } from "react";
-import Toggle from "../components/Toggle";
-import { useNavigate } from "react-router-dom";
+import React from "react";
+import { Outlet } from "react-router";
 import "../App.css";
 
 const Admin = () => {
-  // for routing
-  const [role, setRole] = useState("Admin");
-
-  return <div>Admin</div>;
+  return (
+    <div>
+      <Outlet />  
+    </div>
+  );
 };
 
 export default Admin;
