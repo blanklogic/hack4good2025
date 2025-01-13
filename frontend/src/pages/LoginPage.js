@@ -77,37 +77,36 @@ const LoginPage = () => {
 
   return (
     <div className="login-card">
+      <img src="/MWHlogo.png" alt="MWH Logo" className="login-logo" />
       <ToastContainer />
-      <div className="login-card-body">
-        {/* <form onSubmit={handleLogin}> */}
-        <p>Username</p>
-        <div className="form-group mb-6">
-          <input
-            type="text"
-            id="username"
-            placeholder="Enter Username"
-            className="form-input"
-            required
-          />
-        </div>
-        <p>Password</p>
-        <div className="form-group">
-          <input
-            type="password"
-            id="password"
-            placeholder="Enter Password"
-            className="form-input"
-            required
-          />
-        </div>
-        <button type="submit" className="login-button">
-          Login
-        </button>
-        <p className="login-note">
-          Note: Please use your username and password to login.
-        </p>
-        {/* </form> */}
+      {/* <form onSubmit={handleLogin}> */}
+      <p>Username</p>
+      <div className="form-group">
+        <input
+          type="text"
+          id="username"
+          placeholder="Enter Username"
+          className="form-input"
+          required
+        />
       </div>
+      <p>Password</p>
+      <div className="form-group">
+        <input
+          type="password"
+          id="password"
+          placeholder="Enter Password"
+          className="form-input"
+          required
+        />
+      </div>
+      <button type="submit" className="login-button">
+        Login
+      </button>
+      <p className="login-note">
+        Note: Please use your username and password to login.
+      </p>
+      {/* </form> */}
     </div>
   );
 };
