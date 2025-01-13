@@ -71,3 +71,53 @@ body {
   width: 400px;
   text-align: center;
 }
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 20vw;
+  min-width: 200px;
+  background-color: transparent;
+  backdrop-filter: blur(10px);
+  z-index: 999;
+}
+
+.clock-widget {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  min-height: 100px;
+}
+
+.current-time {
+  font-size: 1.8rem;
+}
+
+.current-date {
+  font-size: 1.2rem;
+  margin-top: -20px;
+}
+
+.icon {
+  font-size: 4rem;
+  padding-top: 10px;
+}
+
+.page-button {
+  width: 60%;
+  font-size: 1.1rem;
+  padding: 0.5rem;
+  border-radius: 15px;
+  border: none;
+}
+
+.pages {
+  margin-top: 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}

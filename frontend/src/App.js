@@ -1,13 +1,19 @@
 import React from "react";
-import Toggle from "./components/Toggle";
 import "./App.css";
-import Admin from "./pages/Admin";
-import Resident from "./pages/Resident";
+import Navbar from "./components/Navbar";
 import LoginPage from "./pages/LoginPage";
 
+const PAGELIST = [
+  "Vouchers",
+  "Transaction History",
+  "Inventory",
+  "Manage Users",
+  "Reports",
+];
 function App() {
   return (
     <div>
+      <Navbar pages={PAGELIST} />
       <LoginPage />
     </div>
   );
