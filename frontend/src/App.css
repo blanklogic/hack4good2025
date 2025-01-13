@@ -16,20 +16,19 @@ body {
 }
 
 /* Styling for login */
+.logo-logo {
+  display: flex;
+  justify-content: left;
+}
 
 .login-card {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
   border-radius: 8px;
-  align-items: center;
-}
-
-.login-card-body {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-items: center;
-  height: auto;
 }
 
 .form-group {
@@ -49,7 +48,7 @@ body {
 
 .login-button {
   font-size: 16px;
-  width: 400px;
+  width: 300px;
   border-radius: 5px;
   padding: 10px;
   background-color: orange;
