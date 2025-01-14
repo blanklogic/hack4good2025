@@ -2,7 +2,7 @@ function LogoButton({ logo, text }) {
   return (
     <div className="logo-button">
       {logo}
-      {text}
+      <p>{text}</p>
     </div>
   );
 }
