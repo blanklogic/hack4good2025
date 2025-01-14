@@ -1,10 +1,32 @@
+/* Font Classes */
+
+.lora-heading {
+  font-family: "Lora", serif;
+  font-optical-sizing: auto;
+  font-weight: 400, 600, 700;
+  font-style: normal;
+}
+
+.roboto-body {
+  font-family: "Roboto", serif;
+  font-optical-sizing: auto;
+  font-weight: 400, 600, 700;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
 html {
   box-sizing: border-box;
+  font-size: 10px;
 }
 
 body {
   margin: 0;
   padding: 0;
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 0.25px;
+  font-size: 1.8rem;
 }
 
 /* Styling for toggle */
@@ -78,7 +100,8 @@ body {
   height: 100vh;
   width: 20vw;
   min-width: 200px;
-  background-color: transparent;
+  max-width: 350px;
+  background-color: whitesmoke;
   backdrop-filter: blur(10px);
   z-index: 999;
 }
@@ -87,36 +110,49 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 1rem;
+  gap: 2rem;
+  height: 10vh;
   min-height: 100px;
 }
 
 .current-time {
-  font-size: 1.8rem;
+  font-family: Lora, sans-serif;
+  font-size: 4rem;
+  font-weight: 700;
+  color: rgb(78, 78, 78);
 }
 
 .current-date {
-  font-size: 1.2rem;
-  margin-top: -20px;
+  font-size: 2rem;
+  margin-top: -40px;
+  color: orange;
+  font-weight: 600;
 }
 
 .icon {
-  font-size: 4rem;
-  padding-top: 10px;
+  font-size: 6rem;
+  padding-top: 25px;
+  color: orange;
 }
 
 .page-button {
   width: 60%;
-  font-size: 1.1rem;
-  padding: 0.5rem;
-  border-radius: 15px;
+  font-size: 1.6rem;
+  padding: 1rem;
+  border-radius: 17px;
   border: none;
+  background-color: orange;
+  color: white;
+}
+
+.page-button:hover {
+  background-color: blue;
 }
 
 .pages {
-  margin-top: 10%;
+  margin-top: 20%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1.5rem;
+  gap: 3rem;
 }

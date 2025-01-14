@@ -1,12 +1,12 @@
 import React from "react";
 import ClockWidget from "./ClockWidget";
-import Pages from "./Pages";
+import PageButtons from "./PageButtons";
 
 function Navbar({ pages }) {
   return (
     <div className="navbar">
       <ClockWidget />
-      <Pages pages={pages} />
+      <PageButtons pages={pages} />
     </div>
   );
 }
