@@ -4,12 +4,13 @@ import Navbar from "./components/Navbar";
 import LoginPage from "./pages/LoginPage";
 
 const PAGELIST = [
-  "Vouchers",
+  "Login",
   "Transaction History",
   "Inventory",
   "Manage Users",
   "Reports",
 ];
+
 function App() {
   return (
     <div>
