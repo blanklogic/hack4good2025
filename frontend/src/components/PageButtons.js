@@ -4,8 +4,8 @@ import PageButton from "./PageButton.js";
 const PageButtons = ({ pages }) => {
   return (
     <div className="pages">
-      {pages.map((page, index) => (
-        <PageButton key={index} title={page} />
+      {Object.keys(pages).map((title) => (
+        <PageButton key={title} title={title} path={pages[title]} />
       ))}
     </div>
   );

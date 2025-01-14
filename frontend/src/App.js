@@ -3,18 +3,18 @@ import "./App.css";
 import Navbar from "./components/Navbar";
 import LoginPage from "./pages/LoginPage";
 
-const PAGELIST = [
-  "Login",
-  "Transaction History",
-  "Inventory",
-  "Manage Users",
-  "Reports",
-];
+const PAGEPATHLIST = {
+  Login: "/",
+  "Transaction History": "/resident/transactions",
+  Inventory: "/admin/inventory",
+  "Manage Users": "/admin/manage",
+  Reports: "/admin/reports",
+};
 
 function App() {
   return (
     <div>
-      <Navbar pages={PAGELIST} />
+      <Navbar pages={PAGEPATHLIST} />
       <LoginPage />
     </div>
   );
