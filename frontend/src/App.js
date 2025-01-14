@@ -2,6 +2,7 @@ import React from "react";
 import "./App.css";
 import Navbar from "./components/Navbar";
 import LoginPage from "./pages/LoginPage";
+import Products from "./pages/Products";
 
 const PAGEPATHLIST = {
   Login: "/",
@@ -14,8 +15,9 @@ const PAGEPATHLIST = {
 function App() {
   return (
     <div>
-      <Navbar pages={PAGEPATHLIST} />
-      <LoginPage />
+      {/* <Navbar pages={PAGEPATHLIST} /> */}
+      <Products />
+      {/* <LoginPage /> */}
     </div>
   );
 }
