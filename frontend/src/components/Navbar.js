@@ -5,8 +5,11 @@ import PageButtons from "./PageButtons";
 function Navbar({ pages }) {
   return (
     <div className="navbar">
-      <ClockWidget />
-      <PageButtons pages={pages} />
+      <div className="navbar-vertical">
+        <ClockWidget />
+        <PageButtons pages={pages} />
+      </div>
+      <div className="navbar-horizontal"></div>
     </div>
   );
 }
