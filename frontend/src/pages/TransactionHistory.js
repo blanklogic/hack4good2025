@@ -1,5 +1,6 @@
 import { React, useState, useRef, useEffect } from "react";
 import TransactionHistoryTable from "./TransactionHistoryTable";
+import Navbar from "../components/Navbar";
 import "../index.css";
 import axios from "axios";
 //const axios = require("axios");
