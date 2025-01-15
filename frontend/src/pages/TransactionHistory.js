@@ -1,15 +1,25 @@
-import { React, useState } from "react";
+import { React, useState, useRef, useEffect } from "react";
 import TransactionHistoryTable from "./TransactionHistoryTable";
 import "../index.css";
-const axios = require("axios");
+import axios from "axios";
+//const axios = require("axios");
 
 const TransactionHistory = () => {
+  //   const callbacksRef = useRef(() => callbacks());
+  //   useEffect(() => {
+  //     callbacksRef.current();
+  //   }, []);
+
+  //     async function callbacks() {
+  //       await getTransactionHistoryData();
+  //     }
   const [transactionHistory, setTransactionHistory] = useState([]);
   async function getTransactionHistoryData() {
-    const url = process.env.REACT_APP_API_URL + `/getTransactionHistory`; // change based on api request url
+    const url = process.env.REACT_APP_API_URL + `/transaction-history`; // change based on api request url
     const configs = {
       method: "GET",
       headers: {
+        Authorization: "Bearer " + localStorage.getItem("token"),
         "Content-Type": "application/json",
       },
     };
