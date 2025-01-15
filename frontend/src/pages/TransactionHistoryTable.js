@@ -5,7 +5,7 @@ const TransactionHistoryTable = (props) => {
   let data = props.tableData;
   let num = 0;
   return (
-    <div className="table-wrap">
+    <div className="h-full w-auto overflow-y-auto">
       <table>
         <thead>
           <tr>

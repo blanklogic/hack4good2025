@@ -3,13 +3,13 @@ import "../index.css";
 
 const Products = () => {
   return (
-    <div>
-      <div className="products-top-container">
-        <h1>Available Products</h1>
+    <div className="mt-14 ml-96">
+      <div className="ml-12 flex justify-between">
+        <h1 className="text-5xl font-bold">Available Products</h1>
         <input
           type="text"
           placeholder="search for products..."
-          className="products-search"
+          className="products-search font-bold"
         />
       </div>
       <div className="grid-container">

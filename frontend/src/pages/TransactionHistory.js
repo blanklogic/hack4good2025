@@ -38,8 +38,7 @@ const TransactionHistory = () => {
   }
 
   return (
-    <div className="transaction-history">
-      <Navbar pages={PAGEPATHLIST} />
+    <div className="flex justify-center gap-4 mt-14">
       <TransactionHistoryTable tableData={transactionHistory} />
     </div>
   );
