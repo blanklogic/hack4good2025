@@ -1,6 +1,6 @@
 import { React, useState } from "react";
 import TransactionHistoryTable from "./TransactionHistoryTable";
-import "../App.css";
+import "../index.css";
 const axios = require("axios");
 
 const TransactionHistory = () => {

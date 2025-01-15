@@ -1,6 +1,6 @@
 import React from "react";
 import { Outlet } from "react-router";
-import "../App.css";
+import "../index.css";
 
 const Resident = () => {
   return (

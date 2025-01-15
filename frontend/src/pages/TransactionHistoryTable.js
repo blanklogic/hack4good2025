@@ -1,5 +1,5 @@
 import React from "react";
-import "../App.css";
+import "../index.css";
 
 const TransactionHistoryTable = (props) => {
   let data = props.tableData;

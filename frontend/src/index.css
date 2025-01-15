@@ -1,13 +1,285 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* Font Classes */
+
+.lora-heading {
+  font-family: "Lora", serif;
+  font-optical-sizing: auto;
+  font-weight: 400, 600, 700;
+  font-style: normal;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+.roboto-body {
+  font-family: "Roboto", serif;
+  font-optical-sizing: auto;
+  font-weight: 400, 600, 700;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 10px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 0.25px;
+  font-size: 1.8rem;
+}
+
+/* Styling for toggle */
+.toggle-admin .toggle-resident {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+}
+
+/* Styling for login */
+.logo-logo {
+  display: flex;
+  justify-content: left;
+}
+
+.login-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  border-radius: 8px;
+}
+
+.form-group {
+  margin-bottom: 24px;
+  width: 400px;
+}
+
+.form-input {
+  font-size: 16px;
+  width: 100%;
+  border-radius: 5px;
+  text-align: center;
+  padding: 10px;
+  border: 1px solid #ccc;
+  box-shadow: inset 1px 0px 8px rgba(215, 215, 215, 0.743);
+}
+
+.login-button {
+  font-size: 16px;
+  width: 300px;
+  border-radius: 5px;
+  padding: 10px;
+  background-color: orange;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.login-button:hover {
+  background-color: blue;
+  transform: scale(1.02);
+}
+
+.login-note {
+  color: #9ca3af;
+  font-size: 13px;
+  margin-top: 23px;
+  width: 400px;
+  text-align: center;
+}
+
+.navbar-vertical {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 20vw;
+  min-width: 250px;
+  max-width: 350px;
+  background-color: whitesmoke;
+  backdrop-filter: blur(10px);
+}
+
+.navbar-horizontal {
+  position: absolute;
+  top: 0;
+  left: 20%;
+  height: 5vh;
+  width: 80vw;
+  min-height: 50px;
+  background-color: transparent;
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: space-between;
+}
+
+.user-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin-left: 2rem;
+}
+
+.logo-button {
+  border-radius: 10px;
+  padding: 0.5rem 1rem;
+  color: white;
+  background: orange;
+}
+
+.logo-button.active {
+  background: linear-gradient(90deg, orange, rgb(191, 10, 191));
+}
+
+.logo-button p {
+  display: inline;
+  margin-left: 0.5rem;
+  font-size: 1.6rem;
+}
+
+.logout-button {
+  font-size: 1.6rem;
+  padding: 1rem;
+  border-radius: 17px;
+  border: none;
+  background-color: orange;
+  color: white;
+  margin: 0.5rem 1rem;
+}
+
+.logout-button:hover {
+  background-color: blue;
+}
+
+.clock-widget {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  height: 10vh;
+  min-height: 100px;
+  margin-top: 10%;
+}
+
+.current-time {
+  font-family: Lora, sans-serif;
+  font-size: 4rem;
+  font-weight: 700;
+  color: rgb(78, 78, 78);
+}
+
+.current-date {
+  font-size: 2rem;
+  margin-top: -40px;
+  color: orange;
+  font-weight: 600;
+}
+
+.icon {
+  font-size: 6rem;
+  padding-top: 25px;
+  color: orange;
+}
+
+.page-button {
+  width: 200px;
+  font-size: 1.6rem;
+  padding: 1rem;
+  border-radius: 17px;
+  border: none;
+  background-color: orange;
+  color: white;
+}
+
+.page-button:hover {
+  background-color: blue;
+}
+
+.pages {
+  margin-top: 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+}
+
+.table-wrap {
+  height: 100%;
+  width: auto;
+  overflow-y: auto;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.table-header {
+  background-color: orange;
+  text-align: center;
+  border: 1px solid blue !important;
+  border-top: 0 !important;
+  padding: 10px;
+  color: white;
+}
+
+.table-data {
+  text-align: center;
+  border: 1px solid;
+  border-color: rgb(200, 200, 200);
+  padding: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  width: 15px;
+  color: black;
+}
+
+.transaction-history {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.products-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.products-top-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.products-search {
+  font-size: 20px;
+  width: 30%;
+  border-radius: 10px;
+  border-color: blue;
+  height: 30px;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Adjust based on your design */
+  grid-gap: 20px;
+  padding: 20px;
+}
+
+.product-card {
+  background-color: #fff;
+  border: 0.5px solid orange;
+  padding: 20px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  height: 300px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.product-card:hover {
+  transform: scale(1.05);
 }
