@@ -131,16 +131,6 @@ body {
   font-size: 1.6rem;
 }
 
-.logout-button {
-  font-size: 1.6rem;
-  padding: 1rem;
-  border-radius: 17px;
-  border: none;
-  background-color: orange;
-  color: white;
-  margin: 0.5rem 1rem;
-}
-
 .logout-button:hover {
   background-color: #2B3491;
 }
@@ -187,6 +177,11 @@ body {
 
 .page-button:hover {
   background-color: #2B3491;
+}
+
+.logout {
+  font-weight: 700;
+  background: linear-gradient(10deg, #2B3491, #D5432D);
 }
 
 .pages {
@@ -254,7 +249,8 @@ body {
 
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Adjust based on your design */
+  grid-template-columns: repeat(3, 1fr);
+  /* Adjust based on your design */
   grid-gap: 20px;
   padding: 20px;
 }
