@@ -24,7 +24,7 @@ const Products = () => {
         <input
           type="text"
           placeholder="search for products..."
-          className="products-search font-bold"
+          className="products-search font-bold mr-8"
         />
       </div>
       <div className="grid-container">

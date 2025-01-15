@@ -29,8 +29,13 @@ const TransactionHistory = () => {
   }
 
   return (
-    <div className="flex justify-center gap-4 mt-14">
-      <TransactionHistoryTable tableData={transactionHistory} />
+    <div className="mt-14 ml-96">
+      <div className="ml-12">
+        <h1 className="text-5xl font-bold">Transaction History</h1>
+      </div>
+      <div className="flex justify-center gap-4 mt-14">
+        <TransactionHistoryTable tableData={transactionHistory} />
+      </div>
     </div>
   );
 };
