@@ -2,15 +2,17 @@ import { React, useState, useRef, useEffect } from "react";
 import TransactionHistoryTable from "./TransactionHistoryTable";
 import "../index.css";
 import axios from "axios";
-import Navbar from "../components/Navbar";
+import { React, useState } from "react";
+import "../index.css";
+import TransactionHistoryTable from "./TransactionHistoryTable";
 //const axios = require("axios");
 
 const PAGEPATHLIST = {
-  Logout: "/",
   "Transaction History": "/resident/transactions",
   Inventory: "/admin/inventory",
   "Manage Users": "/admin/manage",
   Reports: "/admin/reports",
+  Logout: "/",
 };
 
 const TransactionHistory = () => {
