@@ -46,7 +46,6 @@ body {
 
 .login-card {
   padding-top: 24vh;
-  margin-left: 10vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -131,16 +130,6 @@ body {
   font-size: 1.6rem;
 }
 
-.logout-button {
-  font-size: 1.6rem;
-  padding: 1rem;
-  border-radius: 17px;
-  border: none;
-  background-color: orange;
-  color: white;
-  margin: 0.5rem 1rem;
-}
-
 .logout-button:hover {
   background-color: #2B3491;
 }
@@ -189,6 +178,11 @@ body {
   background-color: #2B3491;
 }
 
+.logout {
+  font-weight: 700;
+  background: linear-gradient(10deg, #2B3491, #D5432D);
+}
+
 .pages {
   margin-top: 1rem;
   display: flex;
@@ -197,20 +191,12 @@ body {
   gap: 3rem;
 }
 
-.table-wrap {
-  height: 100%;
-  width: auto;
-  overflow-y: auto;
-  padding-left: 10px;
-  padding-right: 10px;
-}
-
 .table-header {
-  background-color: orange;
+  background-color: #D5432D;
   text-align: center;
-  border: 1px solid blue !important;
+  border: 1px solid #2B3491 !important;
   border-top: 0 !important;
-  padding: 10px;
+  padding: 20px;
   color: white;
 }
 
@@ -225,28 +211,17 @@ body {
   color: black;
 }
 
-.transaction-history {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-}
-
 .products-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-.products-top-container {
-  display: flex;
-  justify-content: space-around;
-}
-
 .products-search {
   font-size: 20px;
   width: 30%;
   border-radius: 10px;
-  border-color: blue;
+  border-color: #2B3491;
   height: 30px;
   padding: 10px;
   margin-top: 10px;
@@ -254,7 +229,8 @@ body {
 
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Adjust based on your design */
+  grid-template-columns: repeat(3, 1fr);
+  /* Adjust based on your design */
   grid-gap: 20px;
   padding: 20px;
 }

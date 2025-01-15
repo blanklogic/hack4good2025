@@ -1,8 +1,8 @@
 import { React, useState, useRef, useEffect } from "react";
 import TransactionHistoryTable from "./TransactionHistoryTable";
-import Navbar from "../components/Navbar";
 import "../index.css";
 import axios from "axios";
+import Navbar from "../components/Navbar";
 //const axios = require("axios");
 
 const PAGEPATHLIST = {
@@ -38,8 +38,7 @@ const TransactionHistory = () => {
   }
 
   return (
-    <div className="transaction-history">
-      <Navbar pages={PAGEPATHLIST} />
+    <div className="flex justify-center gap-4 mt-14">
       <TransactionHistoryTable tableData={transactionHistory} />
     </div>
   );
