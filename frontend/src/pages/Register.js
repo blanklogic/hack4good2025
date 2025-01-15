@@ -35,7 +35,7 @@ const RegisterPage = () => {
     const result = await register(username, password);
     if (result && result.success) {
       toast.success("Registration successful!");
-      navigate("/login");
+      navigate("/");
     } else {
       notify("Registration failed. Please try again.");
     }
