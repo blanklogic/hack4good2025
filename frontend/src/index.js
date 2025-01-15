@@ -17,6 +17,8 @@ import VouchersResident from "./pages/VouchersResident";
 import reportWebVitals from "./reportWebVitals";
 
 const PAGEPATHLIST = {
+  VouchersR: "/resident/vouchers",
+  VouchersA: "/admin/vouchers",
   "Transaction History": "/resident/transactions",
   Products: "/resident/products",
   Inventory: "/admin/inventory",
