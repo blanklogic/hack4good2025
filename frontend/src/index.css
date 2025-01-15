@@ -207,7 +207,7 @@ body {
   padding: 8px;
   font-size: 15px;
   font-weight: 600;
-  width: 15px;
+  width: 400px;
   color: black;
 }
 
@@ -260,4 +260,37 @@ body {
 }
 .request-button:hover {
   background-color: #2b3491;
+}
+
+.buttons-dist {
+  display: flex;
+  width: 400px;
+  align-items: center;
+  gap: 5px;
+  justify-content: center;
+  text-align: center;
+  border: 1px solid #2b3491 !important;
+  border-top: 0 !important;
+  padding: 20px;
+  color: white;
+}
+
+.approve-button {
+  background-color: green;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  justify-self: right;
+}
+
+.reject-button {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  justify-self: right;
 }
