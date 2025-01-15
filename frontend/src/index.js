@@ -16,11 +16,15 @@ import VouchersAdmin from "./pages/VouchersAdmin";
 import VouchersResident from "./pages/VouchersResident";
 import reportWebVitals from "./reportWebVitals";
 
-const PAGEPATHLIST = {
+const RESIDENTPAGEPATHLIST = {
   VouchersR: "/resident/vouchers",
-  VouchersA: "/admin/vouchers",
   "Transaction History": "/resident/transactions",
   Products: "/resident/products",
+  Logout: "/",
+};
+
+const ADMINPAGEPATHLIST = {
+  VouchersA: "/admin/vouchers",
   Inventory: "/admin/inventory",
   "Manage Users": "/admin/manage",
   Reports: "/admin/reports",
@@ -30,7 +34,9 @@ const PAGEPATHLIST = {
 const AppWrapper = () => {
   const location = useLocation();
   const noNavbarRoutes = ["/", "/register"];
-
+  const PAGEPATHLIST = true /*Dummy Code*/
+    ? ADMINPAGEPATHLIST
+    : RESIDENTPAGEPATHLIST;
   const showNavbar = !noNavbarRoutes.includes(location.pathname);
 
   return (

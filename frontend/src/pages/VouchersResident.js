@@ -5,9 +5,9 @@ import "../index.css";
 
 /*Dummy Data*/
 const ITEMS = [
-  { name: "Item 1", price: "2" },
-  { name: "Item 2", price: "3" },
-  { name: "Item 3", price: "4" },
+  { name: "Item 1", description: "Description 1", price: "2" },
+  { name: "Item 2", description: "Description 1", price: "3" },
+  { name: "Item 3", description: "Description 1", price: "4" },
 ];
 const VouchersResident = () => {
   //   const callbacksRef = useRef(() => callbacks());
