@@ -1,28 +1,28 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
-import './index.css';
-import Admin from './pages/Admin';
-import ManageUsers from './pages/ManageUsers';
-import Resident from './pages/Resident';
-import TransactionHistory from './pages/TransactionHistory';
-import reportWebVitals from './reportWebVitals';
-import Reports from './pages/Reports';
-import VouchersResident from './pages/VouchersResident';
-import Inventory from './pages/Inventory';
-import VouchersAdmin from './pages/VouchersAdmin';
-import RegisterPage from './pages/Register';
-import LoginPage from './pages/LoginPage';
-import Navbar from './components/Navbar';
-import Products from './pages/Products';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import "./index.css";
+import Admin from "./pages/Admin";
+import Inventory from "./pages/Inventory";
+import LoginPage from "./pages/LoginPage";
+import ManageUsers from "./pages/ManageUsers";
+import Products from "./pages/Products";
+import RegisterPage from "./pages/Register";
+import Reports from "./pages/Reports";
+import Resident from "./pages/Resident";
+import TransactionHistory from "./pages/TransactionHistory";
+import VouchersAdmin from "./pages/VouchersAdmin";
+import VouchersResident from "./pages/VouchersResident";
+import reportWebVitals from "./reportWebVitals";
 
 const PAGEPATHLIST = {
-  Login: "/",
   "Transaction History": "/resident/transactions",
-  "Products": "/resident/products",
+  Products: "/resident/products",
   Inventory: "/admin/inventory",
   "Manage Users": "/admin/manage",
   Reports: "/admin/reports",
+  Logout: "/",
 };
 
 const AppWrapper = () => {
@@ -53,7 +53,7 @@ const AppWrapper = () => {
   );
 };
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <BrowserRouter>
     <AppWrapper />
