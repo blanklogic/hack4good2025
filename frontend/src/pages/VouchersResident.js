@@ -1,7 +1,14 @@
 import axios from "axios";
 import { React, useState } from "react";
+import Category from "../components/Category";
 import "../index.css";
 
+/*Dummy Data*/
+const ITEMS = [
+  { name: "Item 1", price: "2" },
+  { name: "Item 2", price: "3" },
+  { name: "Item 3", price: "4" },
+];
 const VouchersResident = () => {
   //   const callbacksRef = useRef(() => callbacks());
   //   useEffect(() => {
@@ -26,10 +33,10 @@ const VouchersResident = () => {
     setVouchers(data);
   }
   return (
-    <div className="mt-14 ml-96">
-      <div className="ml-12">
-        <h1 className="text-5xl font-bold">Vouchers</h1>
-      </div>
+    <div className="voucher-categories mt-14 ml-96">
+      <Category title="Food Items" items={ITEMS} /*Placeholder*/ />
+      <Category title="Beverages" items={ITEMS} /*Placeholder*/ />
+      <Category title="Cooking Materials" items={ITEMS} /*Placeholder*/ />
     </div>
   );
 };

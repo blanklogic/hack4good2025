@@ -4,8 +4,8 @@ import PageButtons from "./PageButtons";
 
 function Navbar({ pages }) {
   return (
-    <div>
-      <div className="navbar pt-72">
+    <div className="navbar">
+      <div>
         <ClockWidget />
         <PageButtons pages={pages} />
       </div>
