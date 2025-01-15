@@ -4,6 +4,14 @@ import "../index.css";
 import axios from "axios";
 //const axios = require("axios");
 
+const PAGEPATHLIST = {
+  Logout: "/",
+  "Transaction History": "/resident/transactions",
+  Inventory: "/admin/inventory",
+  "Manage Users": "/admin/manage",
+  Reports: "/admin/reports",
+};
+
 const TransactionHistory = () => {
   //   const callbacksRef = useRef(() => callbacks());
   //   useEffect(() => {
@@ -30,6 +38,7 @@ const TransactionHistory = () => {
 
   return (
     <div className="transaction-history">
+      <Navbar pages={PAGEPATHLIST} />
       <TransactionHistoryTable tableData={transactionHistory} />
     </div>
   );
