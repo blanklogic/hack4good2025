@@ -73,7 +73,7 @@ body {
   width: 400px;
   border-radius: 5px;
   padding: 10px;
-  background-color: #D5432D;
+  background-color: #d5432d;
   color: white;
   border: none;
   cursor: pointer;
@@ -81,7 +81,7 @@ body {
 }
 
 .login-button:hover {
-  background-color: #2B3491;
+  background-color: #2b3491;
   transform: scale(1.02);
 }
 
@@ -131,7 +131,7 @@ body {
 }
 
 .logout-button:hover {
-  background-color: #2B3491;
+  background-color: #2b3491;
 }
 
 .clock-widget {
@@ -154,14 +154,14 @@ body {
 .current-date {
   font-size: 2rem;
   margin-top: -40px;
-  color: #D5432D;
+  color: #d5432d;
   font-weight: 600;
 }
 
 .icon {
   font-size: 7rem;
   padding-top: 25px;
-  color: #D5432D;
+  color: #d5432d;
 }
 
 .page-button {
@@ -170,17 +170,17 @@ body {
   padding: 1rem;
   border-radius: 17px;
   border: none;
-  background-color: #D5432D;
+  background-color: #d5432d;
   color: white;
 }
 
 .page-button:hover {
-  background-color: #2B3491;
+  background-color: #2b3491;
 }
 
 .logout {
   font-weight: 700;
-  background: linear-gradient(10deg, #2B3491, #D5432D);
+  background: linear-gradient(10deg, #2b3491, #d5432d);
 }
 
 .pages {
@@ -192,9 +192,9 @@ body {
 }
 
 .table-header {
-  background-color: #D5432D;
+  background-color: #d5432d;
   text-align: center;
-  border: 1px solid #2B3491 !important;
+  border: 1px solid #2b3491 !important;
   border-top: 0 !important;
   padding: 20px;
   color: white;
@@ -221,7 +221,7 @@ body {
   font-size: 20px;
   width: 30%;
   border-radius: 10px;
-  border-color: #2B3491;
+  border-color: #2b3491;
   height: 30px;
   padding: 10px;
   margin-top: 10px;
@@ -247,4 +247,17 @@ body {
 
 .product-card:hover {
   transform: scale(1.05);
+}
+
+.request-button {
+  background-color: #d5432d;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  justify-self: right;
+}
+.request-button:hover {
+  background-color: #2b3491;
 }

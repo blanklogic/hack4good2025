@@ -37,6 +37,7 @@ const Products = () => {
           <h3>Product Name</h3>
           <p>Product Description</p>
           <p>Price: $10.00</p>
+          <button className="request-button">Request to restock</button>
         </div>
         <div className="product-card">
           <img
