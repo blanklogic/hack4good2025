@@ -98,11 +98,38 @@ body {
   top: 0;
   left: 0;
   height: 100vh;
-  width: 10vw;
-  min-width: 250px;
-  max-width: 350px;
+  width: 250px;
   background-color: whitesmoke;
   backdrop-filter: blur(10px);
+}
+
+@media screen and (max-width: 767px) {
+
+  /* start of phone styles */
+  .navbar-vertical {
+    width: 150px !important;
+  }
+
+  .clock-widget {
+    gap: 0.3rem !important;
+  }
+
+  .current-date {
+    font-size: 1rem !important;
+  }
+
+  .current-time {
+    font-size: 3rem !important;
+  }
+
+  .icon {
+    font-size: 6rem !important;
+  }
+
+  .page-button {
+    width: 130px !important;
+    font-size: 1.2rem !important;
+  }
 }
 
 .user-info {
@@ -138,10 +165,9 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 2rem;
-  height: 10vh;
-  min-height: 100px;
   margin-top: 10%;
+  margin-left: -1rem;
+  gap: 1rem;
 }
 
 .current-time {

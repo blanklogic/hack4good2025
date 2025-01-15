@@ -1,6 +1,6 @@
-import { React, useState, useEffect, useRef } from "react";
-import "../index.css";
 import axios from "axios";
+import { React, useState } from "react";
+import "../index.css";
 
 const VouchersResident = () => {
   //   const callbacksRef = useRef(() => callbacks());
