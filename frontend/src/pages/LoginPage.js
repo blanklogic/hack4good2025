@@ -1,81 +1,90 @@
-import React from "react";
-import { ToastContainer } from "react-toastify";
+import React, { useState } from "react";
+import { useNavigate } from "react-router";
+import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { auth } from "../firebaseConfig";
+import { signInWithEmailAndPassword } from "firebase/auth";
 
 const LoginPage = () => {
-  //   const navigate = useNavigate();
-  //   const navigateRef = useRef(navigate);
+  const navigate = useNavigate();
+  const [formData, setFormData] = useState({
+    email: "",
+    password: "",
+  });
 
-  //   //   useEffect(() => {
-  //   //     const savedSessionData = Cookies.get("sessionData");
-  //   //     if (savedSessionData) {
-  //   //       // const data = JSON.parse(savedSessionData);
-  //   //       // if (data["isViewAllowed"] === 1) {
-  //   //       navigateRef.current("/");
-  //   //     } else {
-  //   //       localStorage.removeItem("token");
-  //   //       navigateRef.current("/");
-  //   //     }
-  //   //   }, []);
+  const handleInputChange = (e) => {
+    const { id, value } = e.target;
+    setFormData({ ...formData, [id]: value });
+  };
 
-  //   //   const handleSaveSessionData = (data) => {
-  //   //     const dataToSave = JSON.stringify(data);
-  //   //     Cookies.set("sessionData", dataToSave);
-  //   //   };
+  const notify = (message) => toast.error(message);
 
-  //   let noti = "";
-  //   const notify = () => toast.error(noti);
+  const handleLogin = async (e) => {
+    e.preventDefault();
+    const { email, password } = formData;
 
-  //   const handleLogin = async (e) => {
-  //     e.preventDefault();
-  //     const username = document.getElementById("username").value;
-  //     const password = document.getElementById("password").value;
+    if (!email || !password) {
+      notify("All fields are required!");
+      return;
+    }
 
-  //     if (!username || !password) {
-  //       noti = "Username or Password cannot be empty!";
-  //       notify();
-  //     } else {
-  //       const result = await login(username, password);
-  //       if (result !== null && result.success) {
-  //         const data = result["key"];
-  //         handleSaveSessionData(data);
-  //         navigate("/management/dashboard2025");
-  //         // if (data.isViewAllowed === 1) {
-  //         //   handleSaveSessionData(data);
-  //         //   navigate("/");
-  //         // } else {
-  //         //   noti = "You cannot access this page!";
-  //         //   notify();
-  //         // }
-  //       } else {
-  //         noti = "Wrong Username or Password!";
-  //         notify();
-  //       }
-  //     }
-  //   };
-
-  //   async function login(username, password) {
-  //     const data = { username, password };
-  //     const url = process.env.REACT_APP_API_URL + `/loginUser`;
-  //     try {
-  //       const response = await fetch(url, {
-  //         method: "POST",
-  //         headers: {
-  //           "Content-Type": "application/json",
-  //         },
-  //         body: JSON.stringify(data),
-  //       });
-  //       const responseData = await response.json();
-  //       console.log(responseData);
-  //       localStorage.setItem("token", responseData.key.token);
-  //       return responseData;
-  //     } catch (error) {
-  //       return null;
-  //     }
-  //   }
+    try {
+      await signInWithEmailAndPassword(auth, email, password);
+      toast.success("Login successful!");
+      navigate("/resident/voucher"); // To change later
+    } catch (error) {
+      notify(error.message || "Login failed. Please try again.");
+    }
+  };
 
   return (
-    <div className="login-card">
+    <div className="flex flex-col justify-center items-center rounded-lg p-[24vh]">
+      <img src="/MWHlogo.png" alt="MWH Logo" className="login-logo" />
+      <ToastContainer />
+      <form onSubmit={handleLogin} className="space-y-6">
+          <div>
+            <label htmlFor="email" className="block text-3xl font-medium text-gray-700">
+              Email
+            </label>
+            <input
+              type="text"
+              id="email"
+              value={formData.email}
+              onChange={handleInputChange}
+              placeholder="example@mail.com"
+              className="w-[400px] px-3 py-2 border rounded-md focus:ring focus:ring-indigo-500 focus:outline-none"
+              required
+            />
+          </div>
+          <div>
+            <label htmlFor="password" className="block text-3xl font-medium text-gray-700">
+              Password
+            </label>
+            <input
+              type="password"
+              id="password"
+              value={formData.password}
+              onChange={handleInputChange}
+              placeholder="Enter Password"
+              className="w-full px-3 py-2 border rounded-md focus:ring focus:ring-indigo-500 focus:outline-none"
+              required
+            />
+          </div>
+          <button
+            type="submit"
+            className="w-full px-4 py-2 text-white bg-[#d5432d] rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+          >
+            Login
+          </button>
+        </form>
+        <p className="text-3xl text-center text-gray-600 mt-4">
+          Don't have an account yet? <a href="/register" className="text-[#d5432d] hover:underline">Register</a>
+        </p>
+    </div>
+  );
+
+  return (
+    <div className="flex flex-col justify-center items-center rounded-lg p-[24vh]">
       <img src="/MWHlogo.png" alt="MWH Logo" className="login-logo" />
       <ToastContainer />
       {/* <form onSubmit={handleLogin}> */}
