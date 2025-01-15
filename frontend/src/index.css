@@ -44,15 +44,6 @@ body {
   justify-content: left;
 }
 
-.login-card {
-  padding-top: 24vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  border-radius: 8px;
-}
-
 .form-group {
   margin-bottom: 24px;
   width: 400px;
