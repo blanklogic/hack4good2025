@@ -1,11 +1,12 @@
 import express from "express";
 import { authenticateToken, authorizeAdmin } from "../middlewares/authMiddleware.mjs";
-import { approveVoucherTask, generateReport } from "../controllers/adminController.mjs";
+import { approveVoucherTask, rejectVoucherTask, generateReport } from "../controllers/adminController.mjs";
 import { createUser, deleteUser, resetUserPassword } from "../services/userService.mjs";
 
 const router = express.Router();
 
 router.post("/approve-voucher", authenticateToken, authorizeAdmin, approveVoucherTask);
+router.post("/reject-voucher", authenticateToken, authorizeAdmin, rejectVoucherTask);
 router.get("/generate-report", authenticateToken, authorizeAdmin, generateReport);
 
 router.post('/create-user', authenticateToken, authorizeAdmin, async (req, res) => {
