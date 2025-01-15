@@ -9,18 +9,18 @@ function Navbar({ pages }) {
   const adminLogo = <GrUserAdmin />;
   const residentLogo = <FaRegUser />;
   return (
-    <div className="navbar">
-      <div className="navbar-vertical">
+    <div>
+      <div className="navbar-vertical pt-72">
         <ClockWidget />
         <PageButtons pages={pages} />
       </div>
-      <div className="navbar-horizontal">
+      {/* <div className="navbar-horizontal">
         <div className="user-info">
           <LogoButton logo={adminLogo} text="Admin" />
           <LogoButton logo={residentLogo} text="Resident" />
         </div>
         <button className="logout-button">Logout</button>
-      </div>
+      </div> */}
     </div>
   );
 }

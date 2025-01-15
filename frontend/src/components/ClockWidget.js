@@ -17,9 +17,9 @@ const ClockWidget = () => {
   return (
     <div className="clock-widget">
       <FaClock className="icon" />
-      <div className="time-date">
-        <p className="current-time">{currentTime}</p>
-        <p className="current-date">{currentDate}</p>
+      <div>
+        <p className="current-time pt-10">{currentTime}</p>
+        <p className="current-date pt-12">{currentDate}</p>
       </div>
     </div>
   );
