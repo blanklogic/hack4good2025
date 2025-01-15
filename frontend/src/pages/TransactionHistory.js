@@ -1,7 +1,16 @@
 import { React, useState } from "react";
-import TransactionHistoryTable from "./TransactionHistoryTable";
+import Navbar from "../components/Navbar";
 import "../index.css";
+import TransactionHistoryTable from "./TransactionHistoryTable";
 const axios = require("axios");
+
+const PAGEPATHLIST = {
+  Logout: "/",
+  "Transaction History": "/resident/transactions",
+  Inventory: "/admin/inventory",
+  "Manage Users": "/admin/manage",
+  Reports: "/admin/reports",
+};
 
 const TransactionHistory = () => {
   const [transactionHistory, setTransactionHistory] = useState([]);
@@ -20,6 +29,7 @@ const TransactionHistory = () => {
 
   return (
     <div className="transaction-history">
+      <Navbar pages={PAGEPATHLIST} />
       <TransactionHistoryTable tableData={transactionHistory} />
     </div>
   );

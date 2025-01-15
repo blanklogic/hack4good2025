@@ -2,7 +2,6 @@ import React from "react";
 import { FaRegUser } from "react-icons/fa";
 import { GrUserAdmin } from "react-icons/gr";
 import ClockWidget from "./ClockWidget";
-import LogoButton from "./LogoButton";
 import PageButtons from "./PageButtons";
 
 function Navbar({ pages }) {
