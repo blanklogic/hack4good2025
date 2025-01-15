@@ -294,3 +294,16 @@ body {
   cursor: pointer;
   justify-self: right;
 }
+
+.add-product-button {
+  background-color: #d5432d;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.add-product-button:hover {
+  background-color: #2b3491;
+}
