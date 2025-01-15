@@ -1,7 +1,22 @@
-import React from "react";
+import { React, useState } from "react";
 import "../index.css";
+import axios from "axios";
 
 const Products = () => {
+  const [products, setProducts] = useState([]);
+  async function getProducts() {
+    const url = process.env.REACT_APP_API_URL + `/`; // change based on api request url
+    const configs = {
+      method: "GET",
+      headers: {
+        Authorization: "Bearer " + localStorage.getItem("token"),
+        "Content-Type": "application/json",
+      },
+    };
+    const response = await axios.get(url, configs);
+    const data = await response.data.key;
+    setProducts(data);
+  }
   return (
     <div className="mt-14 ml-96">
       <div className="ml-12 flex justify-between">

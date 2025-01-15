@@ -31,13 +31,11 @@ const TransactionHistoryTable = (props) => {
             return (
               <tr key={index}>
                 <td className="table-data">{num}</td>
-                <td className="table-data">{1}</td>
-                <td className="table-data">{1}</td>
-                <td className="table-data">{1}</td>
-                <td className="table-data">{1}</td>
-                <td className="table-data">{1}</td>
-                <td className="table-data">{1}</td>
-                <td className="table-data">{1}</td>
+                <td className="table-data">{element.date}</td>
+                <td className="table-data">{element.amount}</td>
+                <td className="table-data">{element.type}</td>
+                <td className="table-data">{element.status}</td>
+                <td className="table-data">{element.invoice}</td>
               </tr>
             );
           })}
