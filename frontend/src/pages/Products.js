@@ -24,10 +24,10 @@ const Products = () => {
         <input
           type="text"
           placeholder="search for products..."
-          className="products-search font-bold mr-8"
+          className="products-search font-bold mr-8 border-[#2b3491] border-2"
         />
       </div>
-      <div className="grid-container">
+      <div className="ml-12 grid-container">
         <div className="product-card">
           <img
             src="https://via.placeholder.com/150"

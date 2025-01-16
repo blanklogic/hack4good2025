@@ -15,16 +15,17 @@ import TransactionHistory from "./pages/TransactionHistory";
 import VouchersAdmin from "./pages/VouchersAdmin";
 import VouchersResident from "./pages/VouchersResident";
 import reportWebVitals from "./reportWebVitals";
+import NotAuthorized from "./pages/NotAuthorised";
 
 const RESIDENTPAGEPATHLIST = {
-  VouchersR: "/resident/vouchers",
+  Vouchers: "/resident/vouchers",
   "Transaction History": "/resident/transactions",
   Products: "/resident/products",
   Logout: "/",
 };
 
 const ADMINPAGEPATHLIST = {
-  VouchersA: "/admin/vouchers",
+  Vouchers: "/admin/vouchers",
   Inventory: "/admin/inventory",
   "Manage Users": "/admin/manage",
   Reports: "/admin/reports",
@@ -33,7 +34,7 @@ const ADMINPAGEPATHLIST = {
 
 const AppWrapper = () => {
   const location = useLocation();
-  const noNavbarRoutes = ["/", "/register"];
+  const noNavbarRoutes = ["/", "/register", "/not-authorized"];
   const PAGEPATHLIST = true /*Dummy Code*/
     ? ADMINPAGEPATHLIST
     : RESIDENTPAGEPATHLIST;
@@ -43,8 +44,11 @@ const AppWrapper = () => {
     <>
       {showNavbar && <Navbar pages={PAGEPATHLIST} />}
       <Routes>
+        {/* Public Route */}
         <Route path="/" element={<LoginPage />} />
         <Route path="register" element={<RegisterPage />} />
+        <Route path="/not-authorized" element={<NotAuthorized />} />
+        {/* Protected Routes */}
         <Route path="admin" element={<Admin />}>
           <Route path="vouchers" element={<VouchersAdmin />} />
           <Route path="inventory" element={<Inventory />} />

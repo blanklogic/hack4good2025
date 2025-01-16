@@ -82,41 +82,6 @@ const LoginPage = () => {
         </p>
     </div>
   );
-
-  return (
-    <div className="flex flex-col justify-center items-center rounded-lg p-[24vh]">
-      <img src="/MWHlogo.png" alt="MWH Logo" className="login-logo" />
-      <ToastContainer />
-      {/* <form onSubmit={handleLogin}> */}
-      <p>Username</p>
-      <div className="form-group">
-        <input
-          type="text"
-          id="username"
-          placeholder="Enter Username"
-          className="form-input"
-          required
-        />
-      </div>
-      <p>Password</p>
-      <div className="form-group">
-        <input
-          type="password"
-          id="password"
-          placeholder="Enter Password"
-          className="form-input"
-          required
-        />
-      </div>
-      <button type="submit" className="login-button">
-        Login
-      </button>
-      <p className="login-note">
-        Note: Please use your username and password to login.
-      </p>
-      {/* </form> */}
-    </div>
-  );
 };
 
 export default LoginPage;

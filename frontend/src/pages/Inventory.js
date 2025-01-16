@@ -7,7 +7,7 @@ const Inventory = () => {
       <div className="ml-12">
         <div className="flex justify-between">
           <h1 className="text-5xl font-bold">Inventory</h1>
-          <button className="add-product-button">Add Product</button>
+          <button className="bg-red-600 text-white p-2 rounded cursor-pointer hover:bg-[#2b3491] mr-8">Add Product</button>
         </div>
         <div className="grid-container">
           <div className="product-card">
