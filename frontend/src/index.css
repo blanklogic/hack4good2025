@@ -98,7 +98,6 @@ body {
 }
 
 @media screen and (max-width: 767px) {
-
   /* start of phone styles */
   .navbar-vertical {
     width: 150px !important;
@@ -381,4 +380,20 @@ body {
   height: 2rem;
   text-align: center;
   font-size: 1.6rem;
+}
+
+.add-product-container {
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(10deg, #2b3491, #d5432d);
+  padding: 20px;
+  border-radius: 8px;
+  height: 100%;
+}
+
+.input-title {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  border-color: #9ca3af;
+  border-radius: 10px;
 }
