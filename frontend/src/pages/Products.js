@@ -18,7 +18,7 @@ const Products = () => {
     setProducts(data);
   }
   return (
-    <div className="mt-14 ml-96">
+    <div className="mt-14 ml-96 pl-24">
       <div className="ml-12 flex justify-between">
         <h1 className="text-5xl font-bold">Available Products</h1>
         <input
