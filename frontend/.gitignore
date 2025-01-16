@@ -18,7 +18,6 @@
 .env.test.local
 .env.production.local
 /src/firebaseConfig.js
-/src/utils/adminWhitelist.json
 
 npm-debug.log*
 yarn-debug.log*
