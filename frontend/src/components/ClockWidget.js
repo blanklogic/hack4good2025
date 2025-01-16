@@ -10,6 +10,7 @@ const ClockWidget = () => {
   });
   const currentDate = dateTime.toLocaleDateString();
   const currentTime = dateTime.toLocaleTimeString([], {
+    //To Change the Time Format
     hour: "2-digit",
     minute: "2-digit",
     hour12: false,
