@@ -94,6 +94,7 @@ body {
   backdrop-filter: blur(10px);
   display: flex;
   justify-content: center;
+  padding-top: 60px;
 }
 
 @media screen and (max-width: 767px) {
@@ -124,14 +125,6 @@ body {
   }
 }
 
-.user-info {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 2rem;
-  margin-left: 2rem;
-}
-
 .logo-button {
   border-radius: 10px;
   padding: 0.5rem 1rem;
@@ -159,6 +152,7 @@ body {
   align-items: center;
   margin-left: -1rem;
   gap: 1rem;
+  margin-top: -2rem;
 }
 
 .current-time {
@@ -179,6 +173,12 @@ body {
   font-size: 7rem;
   padding-top: 25px;
   color: #d5432d;
+}
+
+.login-logo {
+  width: 80%;
+  object-fit: contain;
+  margin: 0 auto;
 }
 
 .page-button {

@@ -4,7 +4,7 @@ import PageButtons from "./PageButtons";
 
 function Navbar({ pages }) {
   return (
-    <div className="navbar pt-96">
+    <div className="navbar">
       <div className="">
         <img src="/MWHlogo.png" alt="MWH Logo" className="login-logo" />
         <ClockWidget />

@@ -2,7 +2,10 @@ import pool from "../config/db.mjs";
 
 export const getVoucherBalance = async (req, res) => {
   try {
-    const [result] = await pool.query("SELECT balance FROM vouchers WHERE user_id = ?", [req.user.uid]);
+    const [result] = await pool.query(
+      "SELECT balance FROM vouchers WHERE user_id = ?",
+      [req.user.uid]
+    );
     res.status(200).json(result[0]);
   } catch (error) {
     res.status(500).json({ error: "Failed to fetch voucher balance" });
@@ -11,7 +14,10 @@ export const getVoucherBalance = async (req, res) => {
 
 export const getTransactionHistory = async (req, res) => {
   try {
-    const [transactions] = await pool.query("SELECT * FROM product_requests WHERE user_id = ?", [req.user.uid]);
+    const [transactions] = await pool.query(
+      "SELECT * FROM product_requests WHERE user_id = ?",
+      [req.user.uid]
+    );
     res.status(200).json(transactions);
   } catch (error) {
     res.status(500).json({ error: "Failed to fetch transaction history" });
@@ -22,10 +28,18 @@ export const requestProduct = async (req, res) => {
   const { product_id, quantity } = req.body;
 
   try {
-    const [voucherResult] = await pool.query("SELECT balance FROM vouchers WHERE user_id = ?", [req.user.uid]);
+    const [voucherResult] = await pool.query(
+      "SELECT balance FROM vouchers WHERE user_id = ?",
+      [req.user.uid]
+    );
+    const [productInfo] = await pool.query(
+      "SELECT price FROM product_inventory WHERE id = ?",
+      [product_id]
+    );
     const currentBalance = voucherResult[0]?.balance;
+    const price = productInfo[0]?.price * quantity;
 
-    if (!currentBalance || currentBalance < quantity) {
+    if (!currentBalance || currentBalance < price) {
       return res.status(400).json({ error: "Insufficient voucher balance" });
     }
 
@@ -35,17 +49,19 @@ export const requestProduct = async (req, res) => {
     );
 
     await pool.query(
-      "UPDATE vouchers SET stock = stock - ? WHERE id = ?", 
+      "UPDATE product_inventory SET stock = stock - ? WHERE id = ?",
       [quantity, product_id]
     );
 
     await pool.query(
       "UPDATE vouchers SET balance = balance - ? WHERE user_id = ?",
-      [quantity, req.user.uid]
+      [price, req.user.uid]
     );
 
     res.status(200).json({ message: "Request submitted successfully" });
   } catch (error) {
-    res.status(500).json({ error: `Failed to request product: ${error.message}` });
+    res
+      .status(500)
+      .json({ error: `Failed to request product: ${error.message}` });
   }
 };
