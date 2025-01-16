@@ -1,8 +1,8 @@
 // src/services/userService.js
-import auth from "../config/firebase.mjs";
+import admin from "../config/firebase.mjs";
 import pool from "../config/db.mjs";
 
-// const auth = app.getAuth();
+const auth = admin.auth();
 
 export const createUser = async (email, password, displayName) => {
   try {
