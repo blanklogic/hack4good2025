@@ -190,10 +190,12 @@ body {
   border: none;
   background-color: #d5432d;
   color: white;
+  transition: transform 0.3s ease-in-out;
 }
 
 .page-button:hover {
   background-color: #2b3491;
+  transform: scale(1.03);
 }
 
 .logout {

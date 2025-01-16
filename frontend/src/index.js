@@ -7,6 +7,7 @@ import Admin from "./pages/Admin";
 import Inventory from "./pages/Inventory";
 import LoginPage from "./pages/LoginPage";
 import ManageUsers from "./pages/ManageUsers";
+import NotAuthorized from "./pages/NotAuthorised";
 import Products from "./pages/Products";
 import RegisterPage from "./pages/Register";
 import Reports from "./pages/Reports";
@@ -15,7 +16,6 @@ import TransactionHistory from "./pages/TransactionHistory";
 import VouchersAdmin from "./pages/VouchersAdmin";
 import VouchersResident from "./pages/VouchersResident";
 import reportWebVitals from "./reportWebVitals";
-import NotAuthorized from "./pages/NotAuthorised";
 
 const RESIDENTPAGEPATHLIST = {
   Vouchers: "/resident/vouchers",
@@ -35,7 +35,12 @@ const ADMINPAGEPATHLIST = {
 const AppWrapper = () => {
   const location = useLocation();
   const noNavbarRoutes = ["/", "/register", "/not-authorized"];
-  const PAGEPATHLIST = true /*Dummy Code*/
+  const residentRoutes = [
+    "/resident/vouchers",
+    "/resident/transactions",
+    "/resident/products",
+  ];
+  const PAGEPATHLIST = !residentRoutes.includes(location.pathname)
     ? ADMINPAGEPATHLIST
     : RESIDENTPAGEPATHLIST;
   const showNavbar = !noNavbarRoutes.includes(location.pathname);
