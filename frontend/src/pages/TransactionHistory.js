@@ -29,7 +29,7 @@ const TransactionHistory = () => {
   }
 
   return (
-    <div className="mt-14 ml-96">
+    <div className="mt-14 ml-96 pl-24">
       <div className="ml-12">
         <h1 className="text-5xl font-bold">Transaction History</h1>
       </div>

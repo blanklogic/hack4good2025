@@ -32,6 +32,7 @@ const VouchersResident = () => {
     const data = await response.data.key;
     setVouchers(data);
   }
+
   return (
     <div className="voucher-categories mt-14 ml-96">
       <Category title="Food Items" items={ITEMS} /*Placeholder*/ />
