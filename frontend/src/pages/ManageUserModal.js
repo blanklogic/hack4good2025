@@ -78,7 +78,7 @@ const ManageUserModal = ({ isOpen, onClose, user, onSave }) => {
           className="input-title"
         />
         <input
-          type="password"
+          type="text"
           placeholder="Password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
