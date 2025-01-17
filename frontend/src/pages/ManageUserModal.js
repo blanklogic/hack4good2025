@@ -40,6 +40,10 @@ const ManageUserModal = ({ isOpen, onClose, user, onSave }) => {
     }
   };
 
+  const handleSuspend = () => {
+    toast.success("Account suspended!");
+  };
+
   return (
     <div className="modal">
       <ToastContainer />
@@ -81,8 +85,8 @@ const ManageUserModal = ({ isOpen, onClose, user, onSave }) => {
           className="input-title"
         />
         <div className="flex justify-end gap-5">
-          <button className="cancel-button" onClick={onClose}>
-            Cancel
+          <button className="cancel-button" onClick={handleSuspend}>
+            Suspend Account
           </button>
           <button className="continue-button" onClick={handleSave}>
             Save
