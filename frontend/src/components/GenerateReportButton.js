@@ -1,44 +1,13 @@
-import React from "react";
+import { useContext } from "react";
+import { AuthContext } from "../AuthContext";
 import * as XLSX from "xlsx";
 
-import { initializeApp } from "firebase/app";
-import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
-
-
-// Firebase client-side configuration (replace with your Firebase config)
-const firebaseConfig = {
-//... replace with own firebase config
-};
-
-const app = initializeApp(firebaseConfig);
-const auth = getAuth(app);
-
-const adminEmail = "admin@example.com";
-const adminPassword = "admin123";
-
-
-export const getIdToken = async () => {
-  try {
-    const userCredential = await signInWithEmailAndPassword(
-      auth,
-      adminEmail,
-      adminPassword
-    ); // change this to user if needed
-    const idToken = await userCredential.user.getIdToken();
-    return idToken;
-  } catch (error) {
-    console.error("Error signing in:", error.message);
-    throw error;
-  }
-};
-
 const GenerateReportButton = () => {
+  const { idToken } = useContext(AuthContext);
   const API_URL = "http://localhost:5000/api/admins/generate-report"; // Replace with your API endpoint
 
   const handleGenerateReport = async () => {
     try {
-      const idToken = await getIdToken(); 
-
       const response = await fetch(API_URL, {
         method: "GET",
         headers: {
@@ -77,7 +46,10 @@ const GenerateReportButton = () => {
   };
 
   return (
-    <button onClick={handleGenerateReport}>
+    <button
+      onClick={handleGenerateReport}
+      className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded"
+    >
       Generate Report
     </button>
   );
