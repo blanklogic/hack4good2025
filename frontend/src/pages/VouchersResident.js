@@ -34,18 +34,31 @@ const VouchersResident = () => {
   //     }
   const [vouchers, setVouchers] = useState([]);
   async function getVouchersData() {
-    const url = process.env.REACT_APP_API_URL + `/voucher-balance`; // change based on api request url
-    const configs = {
-      method: "GET",
-      headers: {
-        Authorization: "Bearer " + localStorage.getItem("token"),
-        "Content-Type": "application/json",
-      },
-    };
-    const response = await axios.get(url, configs);
-    const data = await response.data.key;
-    setVouchers(data);
+    try {
+      const url = process.env.API_URL + `/residents/voucher-balance`; // change based on api request url
+      const idToken = await getIdToken();
+
+      const response = await fetch(url, {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${idToken}`, // Send ID Token in Authorization header
+        },
+      });
+
+      if (!response.ok) {
+        throw new Error(`API request failed with status ${response.status}`);
+      }
+
+      const data = await response.json();
+      console.log("API Response:", data);
+      setVouchers(data);
+    } catch (error) {
+      console.error("Error calling backend:", error.message);
+    }
   }
+
+
   const [clickedItem, setClickedItem] = useState(null);
   const clickedItemRef = useRef(null);
 

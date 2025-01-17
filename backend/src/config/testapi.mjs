@@ -7,7 +7,7 @@ dotenv.config();
 
 // Firebase client-side configuration (replace with your Firebase config)
 const firebaseConfig = {
-// firebase_config......
+  // firebase_config......
 };
 
 const app = initializeApp(firebaseConfig);
@@ -46,7 +46,7 @@ const adminPassword = "admin123";
 // const API_URL = "http://localhost:5000/api/admins/reset-password"; // reset password for user
 // const API_URL = `http://localhost:5000/api/admins/delete-user/${firebase_user_uid}`; // delete specific user
 
-const getIdToken = async () => {
+export const getIdToken = async () => {
   try {
     const userCredential = await signInWithEmailAndPassword(
       auth,

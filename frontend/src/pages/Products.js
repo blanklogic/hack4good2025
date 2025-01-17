@@ -1,21 +1,35 @@
 import { React, useState } from "react";
 import "../index.css";
-import axios from "axios";
 
 const Products = () => {
+  // const callbacksRef = useRef(() => callbacks());
+  // useEffect(() => {
+  //   callbacksRef.current();
+  // }, []);
+
+  // async function callbacks() {
+  //   await getProducts();
+  // }
+
   const [products, setProducts] = useState([]);
   async function getProducts() {
-    const url = process.env.REACT_APP_API_URL + `/`; // change based on api request url
-    const configs = {
-      method: "GET",
-      headers: {
-        Authorization: "Bearer " + localStorage.getItem("token"),
-        "Content-Type": "application/json",
-      },
-    };
-    const response = await axios.get(url, configs);
-    const data = await response.data.key;
-    setProducts(data);
+    try {
+      const url = process.env.API_URL + `/admins/products`; // change based on api request url
+      const response = {
+        method: "GET",
+        headers: {
+          Authorization: `Bearer ${idToken}`,
+          "Content-Type": "application/json",
+        },
+      };
+      if (!response.ok) {
+        throw new Error(`API request failed with status ${response.status}`);
+      }
+      const data = await response.json();
+      setProducts(data);
+    } catch (error) {
+      console.error("Error calling backend:", error.message);
+    }
   }
   return (
     <div className="mt-14 ml-96 pl-24">
