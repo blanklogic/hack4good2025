@@ -1,6 +1,7 @@
-import { React, useState } from "react";
+import { React, useContext, useState } from "react";
 import "../index.css";
 import TransactionHistoryTable from "./TransactionHistoryTable";
+import { AuthContext } from "../AuthContext";
 
 const TransactionHistory = () => {
   // const callbacksRef = useRef(() => callbacks());
@@ -11,10 +12,11 @@ const TransactionHistory = () => {
   // async function callbacks() {
   //   await getTransactionHistoryData();
   // }
+  const { idToken } = useContext(AuthContext);
   const [transactionHistory, setTransactionHistory] = useState([]);
+  
   async function getTransactionHistoryData() {
     try {
-      //const idToken = await getIdToken();
       const url = process.env.API_URL + "/residents/transaction-history";
 
       const response = await fetch(url, {

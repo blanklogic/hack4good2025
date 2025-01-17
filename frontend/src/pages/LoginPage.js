@@ -1,11 +1,17 @@
 import { signInWithEmailAndPassword } from "firebase/auth";
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { useNavigate } from "react-router";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { auth } from "../firebaseConfig";
+<<<<<<< Updated upstream
+=======
+import { jwtDecode } from "jwt-decode";
+import { AuthContext } from "../AuthContext";
+>>>>>>> Stashed changes
 
 const LoginPage = () => {
+  const { setIdToken } = useContext(AuthContext);
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
     email: "",
@@ -35,13 +41,14 @@ const LoginPage = () => {
         password
       );
       const idToken = await userCredential.user.getIdToken();
-      // const decodedToken = jwtDecode(idToken);
+      setIdToken(idToken);
+      const decodedToken = jwtDecode(idToken);
       toast.success("Login successful!");
-      // if (decodedToken.isAdmin) {
-      //   navigate("/admin/vouchers", { idToken });
-      // } else {
-      //   navigate("/resident/vouchers", { idToken });
-      // }
+      if (decodedToken.isAdmin) {
+        navigate("/admin/vouchers");
+      } else {
+        navigate("/resident/vouchers");
+      }
     } catch (error) {
       notify(error.message || "Login failed. Please try again.");
     }

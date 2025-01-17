@@ -1,7 +1,9 @@
-import { React, useRef, useState } from "react";
+import axios from "axios";
+import { React, useContext, useRef, useState } from "react";
 import Category from "../components/Category";
 import ItemCart from "../components/ItemCart";
 import "../index.css";
+import { AuthContext } from "../AuthContext";
 
 /*Dummy Data*/
 const FOODITEMS = [
@@ -33,11 +35,12 @@ const VouchersResident = () => {
   //     async function callbacks() {
   //       await getVouchersData();
   //     }
+  const { idToken } = useContext(AuthContext);
   const [vouchers, setVouchers] = useState([]);
+
   async function getVouchersData() {
     try {
       const url = process.env.API_URL + `/residents/voucher-balance`; // change based on api request url
-      //    const idToken = await getIdToken();
 
       const response = await fetch(url, {
         method: "GET",
