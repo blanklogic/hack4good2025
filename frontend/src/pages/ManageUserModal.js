@@ -32,6 +32,7 @@ const ManageUserModal = ({ isOpen, onClose, user, onSave }) => {
         password: user.password,
       });
       onClose();
+      toast.success("User information saved!");
     } else {
       console.error("onSave is not a function!");
     }
@@ -39,8 +40,8 @@ const ManageUserModal = ({ isOpen, onClose, user, onSave }) => {
 
   return (
     <div className="modal">
+      <ToastContainer />
       <div className="modal-content">
-        <ToastContainer />
         <div className="flex justify-between">
           <h2 className="font-bold text-5xl">User Information</h2>
           <button className="close-button" onClick={onClose}>

@@ -1,10 +1,10 @@
-import { React, useState } from "react";
+import { React, useContext, useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "../index.css";
-import { useLocation } from "react-router";
+import { AuthContext } from "../AuthContext";
 
 const Products = () => {
-  const { idToken } = useLocation();
+  const { idToken } = useContext(AuthContext);
   // dummy data
   const products_file = [
     {

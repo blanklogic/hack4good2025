@@ -16,6 +16,7 @@ import TransactionHistory from "./pages/TransactionHistory";
 import VouchersAdmin from "./pages/VouchersAdmin";
 import VouchersResident from "./pages/VouchersResident";
 import reportWebVitals from "./reportWebVitals";
+import { AuthProvider } from "./AuthContext";
 
 const RESIDENTPAGEPATHLIST = {
   Vouchers: "/resident/vouchers",
@@ -73,7 +74,9 @@ const AppWrapper = () => {
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <BrowserRouter>
-    <AppWrapper />
+    <AuthProvider>
+      <AppWrapper />
+    </AuthProvider>
   </BrowserRouter>
 );
 

@@ -1,0 +1,168 @@
+[
+  [
+    {
+      "id": 1,
+      "name": "Apple",
+      "description": "Fresh red apples",
+      "price": 5,
+      "stock": 90,
+      "created_at": "2025-01-15T15:22:23.000Z",
+      "updated_at": "2025-01-16T10:16:29.000Z",
+      "image": "https://hack-4-good-temp.s3.ap-southeast-1.amazonaws.com/apple.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Banana",
+      "description": "Ripe yellow bananas",
+      "price": 3,
+      "stock": 140,
+      "created_at": "2025-01-15T15:22:23.000Z",
+      "updated_at": "2025-01-15T15:22:37.000Z",
+      "image": "https://hack-4-good-temp.s3.ap-southeast-1.amazonaws.com/banana.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Orange",
+      "description": "Juicy oranges",
+      "price": 4,
+      "stock": 121,
+      "created_at": "2025-01-15T15:22:23.000Z",
+      "updated_at": "2025-01-15T15:22:51.000Z",
+      "image": "https://hack-4-good-temp.s3.ap-southeast-1.amazonaws.com/orange.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Bread",
+      "description": "Whole grain bread",
+      "price": 6,
+      "stock": 77,
+      "created_at": "2025-01-15T15:22:23.000Z",
+      "updated_at": "2025-01-15T15:22:37.000Z",
+      "image": "https://hack-4-good-temp.s3.ap-southeast-1.amazonaws.com/bread.jpg"
+    }
+  ],
+  [
+    {
+      "id": 5,
+      "name": "Milk",
+      "description": "1L full cream milk",
+      "price": 10,
+      "stock": 50,
+      "created_at": "2025-01-15T15:22:23.000Z",
+      "updated_at": "2025-01-15T15:22:23.000Z",
+      "image": "https://hack-4-good-temp.s3.ap-southeast-1.amazonaws.com/milk.jpg"
+    },
+    {
+      "id": 6,
+      "name": "Coke",
+      "description": "1.5L Coke Original",
+      "price": 8,
+      "stock": 50,
+      "created_at": "2025-01-15T15:22:23.000Z",
+      "updated_at": "2025-01-15T15:22:23.000Z",
+      "image": "https://images.unsplash.com/photo-1622483767028-3f66f32aef97?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+      "id": 7,
+      "name": "Mineral Water",
+      "description": "1.5L Mineral Water",
+      "price": 5,
+      "stock": 50,
+      "created_at": "2025-01-15T15:22:23.000Z",
+      "updated_at": "2025-01-15T15:22:23.000Z",
+      "image": "https://images.unsplash.com/photo-1595994195534-d5219f02f99f?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+      "id": 8,
+      "name": "Orange Juice",
+      "description": "1L Natural Orange Juice",
+      "price": 12,
+      "stock": 50,
+      "created_at": "2025-01-15T15:22:23.000Z",
+      "updated_at": "2025-01-15T15:22:23.000Z",
+      "image": "https://images.unsplash.com/photo-1524156868115-e696b44983db?q=80&w=1730&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+      "id": 9,
+      "name": "Apple Juice",
+      "description": "1L Natural Apple Juice",
+      "price": 12,
+      "stock": 50,
+      "created_at": "2025-01-15T15:22:23.000Z",
+      "updated_at": "2025-01-15T15:22:23.000Z",
+      "image": "https://images.unsplash.com/photo-1626120032630-b51c96a544f5?q=80&w=1664&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+      "id": 10,
+      "name": "Ice Lemon Tea",
+      "description": "1.5L Ice Lemon Tea",
+      "price": 9,
+      "stock": 50,
+      "created_at": "2025-01-15T15:22:23.000Z",
+      "updated_at": "2025-01-15T15:22:23.000Z",
+      "image": "https://images.unsplash.com/photo-1599390719602-2874f553a716?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    }
+  ],
+  [
+    {
+      "id": 11,
+      "name": "Flour",
+      "description": "1kg Wheat Flour",
+      "price": 3,
+      "stock": 50,
+      "created_at": "2025-01-15T15:22:23.000Z",
+      "updated_at": "2025-01-15T15:22:23.000Z",
+      "image": "https://images.unsplash.com/photo-1603777953081-624bff44a0a5?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+      "id": 12,
+      "name": "White Rice",
+      "description": "2kg White Rice",
+      "price": 7,
+      "stock": 50,
+      "created_at": "2025-01-15T15:22:23.000Z",
+      "updated_at": "2025-01-15T15:22:23.000Z",
+      "image": "https://images.unsplash.com/photo-1651793371427-ad065df0d208?q=80&w=1673&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+      "id": 13,
+      "name": "Mineral Salt",
+      "description": "500g Mineral Salt",
+      "price": 2,
+      "stock": 50,
+      "created_at": "2025-01-15T15:22:23.000Z",
+      "updated_at": "2025-01-15T15:22:23.000Z",
+      "image": "https://images.unsplash.com/photo-1518110925495-5fe2fda0442c?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+      "id": 14,
+      "name": "Cane Sugar",
+      "description": "500g Can Sugar",
+      "price": 2,
+      "stock": 50,
+      "created_at": "2025-01-15T15:22:23.000Z",
+      "updated_at": "2025-01-15T15:22:23.000Z",
+      "image": "https://images.unsplash.com/photo-1709651808265-977ed7ef78c6?q=80&w=1738&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+      "id": 15,
+      "name": "Sunflower Oil",
+      "description": "3L Sunflower Oil",
+      "price": 5,
+      "stock": 50,
+      "created_at": "2025-01-15T15:22:23.000Z",
+      "updated_at": "2025-01-15T15:22:23.000Z",
+      "image": "https://images.unsplash.com/photo-1654245201134-49f7e8115817?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+      "id": 16,
+      "name": "Canola Oil",
+      "description": "3L Canola Oil",
+      "price": 6,
+      "stock": 50,
+      "created_at": "2025-01-15T15:22:23.000Z",
+      "updated_at": "2025-01-15T15:22:23.000Z",
+      "image": "https://images.unsplash.com/photo-1552592074-ea7a91b851b3?q=80&w=1664&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    }
+  ]
+]

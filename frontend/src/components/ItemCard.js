@@ -19,8 +19,17 @@ function ItemCard({ item, isClicked, onItemClick, onAddToCart }) {
   };
 
   return (
-    <div className="item-card" onClick={onItemClick}>
-      {!isClicked && <h2 className="text-xl font-bold">{item.name}</h2>}
+    <div
+      className="item-card"
+      onClick={onItemClick}
+      style={{
+        backgroundImage: `url(${item.image})`,
+        backgroundSize: "contain",
+      }}
+    >
+      {!isClicked && (
+        <h2 className="item-card-name text-xl font-bold">{item.name}</h2>
+      )}
       {isClicked && (
         <div class="item-card-info">
           <h2 className="text-xl font-bold">{`Vouchers required: ${item.price}`}</h2>

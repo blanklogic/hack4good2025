@@ -1,28 +1,16 @@
-import { React, useRef, useState } from "react";
+import axios from "axios";
+import { React, useContext, useRef, useState } from "react";
+import { MdOutlineShoppingCart } from "react-icons/md";
 import Category from "../components/Category";
 import ItemCart from "../components/ItemCart";
+import database from "../database.json";
 import "../index.css";
+import { AuthContext } from "../AuthContext";
 
 /*Dummy Data*/
-const FOODITEMS = [
-  { name: "Watermelon", description: "A juicy whole watermelon", price: "2" },
-  { name: "Hamburger", description: "A mouth-watering hamburger", price: "3" },
-  { name: "Indomee", description: "A delectable meal", price: "2" },
-];
-const BEVERAGEITEMS = [
-  { name: "Coke", description: "A classic delight", price: "2" },
-  {
-    name: "Sprite",
-    description: "A transparent sweet carbonated syrup drink",
-    price: "3",
-  },
-  { name: "Mountain Dew", description: "Eww", price: "2" },
-];
-const COOKINGITEMS = [
-  { name: "Flour", description: "A juicy whole watermelon", price: "2" },
-  { name: "Cabbage", description: "A mouth-watering hamburger", price: "3" },
-  { name: "Chicken Breast", description: "A delectable meal", price: "2" },
-];
+const FOODITEMS = database[0];
+const BEVERAGEITEMS = database[1];
+const COOKINGITEMS = database[2];
 
 const VouchersResident = () => {
   //   const callbacksRef = useRef(() => callbacks());
@@ -33,11 +21,12 @@ const VouchersResident = () => {
   //     async function callbacks() {
   //       await getVouchersData();
   //     }
+  const { idToken } = useContext(AuthContext);
   const [vouchers, setVouchers] = useState([]);
+
   async function getVouchersData() {
     try {
       const url = process.env.API_URL + `/residents/voucher-balance`; // change based on api request url
-      //    const idToken = await getIdToken();
 
       const response = await fetch(url, {
         method: "GET",
@@ -88,7 +77,7 @@ const VouchersResident = () => {
     setCartItems((prevItems) => ({
       ...prevItems,
       [itemName]: prevItems[itemName]
-        ? prevItems[itemName] + itemQuantity
+        ? Number(prevItems[itemName]) + itemQuantity
         : itemQuantity,
     }));
   };
@@ -103,9 +92,10 @@ const VouchersResident = () => {
         />
       )}
       {!isCartVisible && (
-        <section>
+        <section className="mb-8">
           <div class="cart-topbar">
             <button onClick={handleCartVisibility} className="cart-button">
+              <MdOutlineShoppingCart className="inline-block mb-1 mr-1 size-7" />
               View Cart
             </button>
           </div>
