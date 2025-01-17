@@ -1,6 +1,6 @@
-import axios from "axios";
 import { React, useRef, useState } from "react";
 import Category from "../components/Category";
+import ItemCart from "../components/ItemCart";
 import "../index.css";
 
 /*Dummy Data*/
@@ -23,6 +23,7 @@ const COOKINGITEMS = [
   { name: "Cabbage", description: "A mouth-watering hamburger", price: "3" },
   { name: "Chicken Breast", description: "A delectable meal", price: "2" },
 ];
+
 const VouchersResident = () => {
   //   const callbacksRef = useRef(() => callbacks());
   //   useEffect(() => {
@@ -36,13 +37,13 @@ const VouchersResident = () => {
   async function getVouchersData() {
     try {
       const url = process.env.API_URL + `/residents/voucher-balance`; // change based on api request url
-      const idToken = await getIdToken();
+      //    const idToken = await getIdToken();
 
       const response = await fetch(url, {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
-          Authorization: `Bearer ${idToken}`, // Send ID Token in Authorization header
+          //        Authorization: `Bearer ${idToken}`, // Send ID Token in Authorization header
         },
       });
 
@@ -58,9 +59,8 @@ const VouchersResident = () => {
     }
   }
 
-
   const [clickedItem, setClickedItem] = useState(null);
-  const clickedItemRef = useRef(null);
+  const clickedItemRef = useRef(null); // stores a string containing the clicked item's name
 
   const handleItemClick = (itemName) => {
     if (clickedItemRef.current === itemName) {
@@ -72,27 +72,62 @@ const VouchersResident = () => {
     }
   };
 
+  /* Handles cart visibility */
+  const [isCartVisible, setIsCartVisible] = useState(false);
+  const handleCartVisibility = () => {
+    setIsCartVisible((prevVisibility) => !prevVisibility);
+  };
+
+  /* Handles sending data to cart */
+  const [cartItems, setCartItems] = useState({});
+  const handleBackButton = (items) => {
+    setIsCartVisible(false);
+    setCartItems(items);
+  };
+  const handleAddToCart = (itemName, itemQuantity) => {
+    setCartItems((prevItems) => ({
+      ...prevItems,
+      [itemName]: prevItems[itemName]
+        ? prevItems[itemName] + itemQuantity
+        : itemQuantity,
+    }));
+  };
+
   return (
-    <div className="voucher-categories mt-14 ml-96">
-      <Category
-        title="Food Items"
-        items={FOODITEMS}
-        clickedItem={clickedItem}
-        onItemClick={handleItemClick} /*Placeholder*/
-      />
-      <Category
-        title="Beverages"
-        items={BEVERAGEITEMS}
-        clickedItem={clickedItem}
-        onItemClick={handleItemClick} /*Placeholder*/
-      />
-      <Category
-        title="Cooking Materials"
-        items={COOKINGITEMS}
-        clickedItem={clickedItem}
-        onItemClick={handleItemClick} /*Placeholder*/
-      />
-    </div>
+    <>
+      {isCartVisible && (
+        <ItemCart
+          items={cartItems}
+          onBackButtonClicked={handleBackButton}
+          //onSubmit={(items) => setCartItems(items)}
+        />
+      )}
+      {!isCartVisible && (
+        <div className="voucher-categories mt-14 ml-96">
+          <Category
+            title="Food Items"
+            items={FOODITEMS} /*Placeholder*/
+            clickedItem={clickedItem}
+            onItemClick={handleItemClick}
+            onAddToCart={handleAddToCart}
+          />
+          <Category
+            title="Beverages"
+            items={BEVERAGEITEMS} /*Placeholder*/
+            clickedItem={clickedItem}
+            onItemClick={handleItemClick}
+            onAddToCart={handleAddToCart}
+          />
+          <Category
+            title="Cooking Materials"
+            items={COOKINGITEMS} /*Placeholder*/
+            clickedItem={clickedItem}
+            onItemClick={handleItemClick}
+            onAddToCart={handleAddToCart}
+          />
+        </div>
+      )}
+    </>
   );
 };
 

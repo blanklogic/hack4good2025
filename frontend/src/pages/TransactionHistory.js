@@ -14,14 +14,14 @@ const TransactionHistory = () => {
   const [transactionHistory, setTransactionHistory] = useState([]);
   async function getTransactionHistoryData() {
     try {
-      const idToken = await getIdToken();
+      //const idToken = await getIdToken();
       const url = process.env.API_URL + "/residents/transaction-history";
 
       const response = await fetch(url, {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
-          Authorization: `Bearer ${idToken}`,
+          //Authorization: `Bearer ${idToken}`,
         },
       });
 

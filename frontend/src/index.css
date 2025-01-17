@@ -98,6 +98,7 @@ body {
 }
 
 @media screen and (max-width: 767px) {
+
   /* start of phone styles */
   .navbar-vertical {
     width: 150px !important;
@@ -605,4 +606,11 @@ body {
 
 .manage-button:hover {
   background-color: #2b3491;
+}
+
+/*Item Cart Styles*/
+.item-cart-container {
+  background-color: gray;
+  width: 100vh;
+  height: 100vh;
 }
