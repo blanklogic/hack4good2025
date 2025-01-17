@@ -4,11 +4,8 @@ import { useNavigate } from "react-router";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { auth } from "../firebaseConfig";
-<<<<<<< Updated upstream
-=======
 import { jwtDecode } from "jwt-decode";
 import { AuthContext } from "../AuthContext";
->>>>>>> Stashed changes
 
 const LoginPage = () => {
   const { setIdToken } = useContext(AuthContext);
