@@ -103,29 +103,36 @@ const VouchersResident = () => {
         />
       )}
       {!isCartVisible && (
-        <div className="voucher-categories mt-14 ml-96">
-          <Category
-            title="Food Items"
-            items={FOODITEMS} /*Placeholder*/
-            clickedItem={clickedItem}
-            onItemClick={handleItemClick}
-            onAddToCart={handleAddToCart}
-          />
-          <Category
-            title="Beverages"
-            items={BEVERAGEITEMS} /*Placeholder*/
-            clickedItem={clickedItem}
-            onItemClick={handleItemClick}
-            onAddToCart={handleAddToCart}
-          />
-          <Category
-            title="Cooking Materials"
-            items={COOKINGITEMS} /*Placeholder*/
-            clickedItem={clickedItem}
-            onItemClick={handleItemClick}
-            onAddToCart={handleAddToCart}
-          />
-        </div>
+        <section>
+          <div class="cart-topbar">
+            <button onClick={handleCartVisibility} className="cart-button">
+              View Cart
+            </button>
+          </div>
+          <div className="voucher-categories mt-20 ml-96">
+            <Category
+              title="Food Items"
+              items={FOODITEMS} /*Placeholder*/
+              clickedItem={clickedItem}
+              onItemClick={handleItemClick}
+              onAddToCart={handleAddToCart}
+            />
+            <Category
+              title="Beverages"
+              items={BEVERAGEITEMS} /*Placeholder*/
+              clickedItem={clickedItem}
+              onItemClick={handleItemClick}
+              onAddToCart={handleAddToCart}
+            />
+            <Category
+              title="Cooking Materials"
+              items={COOKINGITEMS} /*Placeholder*/
+              clickedItem={clickedItem}
+              onItemClick={handleItemClick}
+              onAddToCart={handleAddToCart}
+            />
+          </div>
+        </section>
       )}
     </>
   );
