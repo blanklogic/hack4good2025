@@ -521,6 +521,23 @@ body {
   background-color: darkred;
 }
 
+.close-button {
+  display: flex;
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 5px 8px;
+  font-size: 15px;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  justify-self: flex-end;
+}
+
+.close-button:hover {
+  background-color: darkred;
+}
+
 .summary-container {
   display: flex;
   flex-direction: column;
@@ -636,4 +653,16 @@ body {
   cursor: pointer;
   float: right;
   font-size: 1.6rem;
+}
+
+.close-button {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 5px 8px;
+  font-size: 15px;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  justify-content: flex-end;
 }
