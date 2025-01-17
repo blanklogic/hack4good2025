@@ -331,7 +331,7 @@ body {
 .voucher-categories {
   display: flex;
   justify-content: space-around;
-  margin-top: 6.5rem;
+  margin-top: 8rem;
 }
 
 .category {
@@ -356,6 +356,10 @@ body {
   height: 15rem;
   width: 30rem;
   transition: transform 0.3s ease-in-out;
+}
+
+.item-card:hover {
+  transform: scale(1.05);
 }
 
 .item-card-name {
@@ -384,12 +388,16 @@ body {
   padding: 5px;
   border-radius: 10px;
   cursor: pointer;
-  transition: transform 0.3s ease-in-out;
+  transition: transform 0.2s ease-in-out;
 }
 
 .item-card button:hover {
   background-color: #2b3491;
   transform: scale(1.03);
+}
+
+.item-card button:active {
+  transform: scale(1);
 }
 
 .item-card input {
@@ -638,6 +646,7 @@ body {
 /*Item Cart Styles*/
 .cart-topbar {
   position: fixed;
+  padding-top: 1rem;
   top: 0;
   left: 0;
   width: calc(100% - 30rem);
@@ -744,4 +753,10 @@ body {
 
 .item-cart-item:last-of-type {
   margin-bottom: 0;
+}
+
+
+.transaction-history-resident h1 {
+  margin-top: 8rem;
+  color: #d5432d;
 }

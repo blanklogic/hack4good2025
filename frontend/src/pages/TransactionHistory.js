@@ -1,7 +1,7 @@
 import { React, useContext, useState } from "react";
+import { AuthContext } from "../AuthContext";
 import "../index.css";
 import TransactionHistoryTable from "./TransactionHistoryTable";
-import { AuthContext } from "../AuthContext";
 
 const TransactionHistory = () => {
   // const callbacksRef = useRef(() => callbacks());
@@ -14,7 +14,7 @@ const TransactionHistory = () => {
   // }
   const { idToken } = useContext(AuthContext);
   const [transactionHistory, setTransactionHistory] = useState([]);
-  
+
   async function getTransactionHistoryData() {
     try {
       const url = process.env.API_URL + "/residents/transaction-history";
@@ -40,9 +40,9 @@ const TransactionHistory = () => {
   }
 
   return (
-    <div className="mt-14 ml-96 pl-24">
+    <div className="transaction-history-resident mt-14 ml-96 pl-36 pr-12">
       <div className="ml-12">
-        <h1 className="text-5xl font-bold">Transaction History</h1>
+        <h1 className="text-5xl font-bold ">Transaction History</h1>
       </div>
       <div className="flex justify-center gap-4 mt-14">
         {/* <TransactionHistoryTable tableData={transactionHistory} /> */}

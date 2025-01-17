@@ -32,7 +32,7 @@ function ItemCard({ item, isClicked, onItemClick, onAddToCart }) {
       )}
       {isClicked && (
         <div class="item-card-info">
-          <h2 className="text-xl font-bold">{`Vouchers required: ${item.price}`}</h2>
+          <h2 className="text-xl font-bold">{`Price: $${item.price}`}</h2>
           <input
             type="number"
             min="0"

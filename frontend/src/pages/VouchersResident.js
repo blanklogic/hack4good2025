@@ -1,11 +1,10 @@
-import axios from "axios";
 import { React, useContext, useRef, useState } from "react";
 import { MdOutlineShoppingCart } from "react-icons/md";
+import { AuthContext } from "../AuthContext";
 import Category from "../components/Category";
 import ItemCart from "../components/ItemCart";
 import database from "../database.json";
 import "../index.css";
-import { AuthContext } from "../AuthContext";
 
 /*Dummy Data*/
 const FOODITEMS = database[0];
@@ -74,12 +73,18 @@ const VouchersResident = () => {
     setCartItems(items);
   };
   const handleAddToCart = (itemName, itemQuantity) => {
-    setCartItems((prevItems) => ({
-      ...prevItems,
-      [itemName]: prevItems[itemName]
-        ? Number(prevItems[itemName]) + itemQuantity
-        : itemQuantity,
-    }));
+    setCartItems((prevItems) => {
+      if (itemQuantity > 0) {
+        return {
+          ...prevItems,
+          [itemName]: prevItems[itemName]
+            ? Number(prevItems[itemName]) + itemQuantity
+            : itemQuantity,
+        };
+      } else {
+        return prevItems;
+      }
+    });
   };
 
   return (
