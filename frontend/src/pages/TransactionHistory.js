@@ -43,7 +43,8 @@ const TransactionHistory = () => {
         <h1 className="text-5xl font-bold">Transaction History</h1>
       </div>
       <div className="flex justify-center gap-4 mt-14">
-        <TransactionHistoryTable tableData={transactionHistory} />
+        {/* <TransactionHistoryTable tableData={transactionHistory} /> */}
+        <TransactionHistoryTable />
       </div>
     </div>
   );
