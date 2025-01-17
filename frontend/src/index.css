@@ -253,7 +253,7 @@ body {
   padding: 20px;
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
-  height: 500px;
+  height: 300px;
   transition: transform 0.3s ease-in-out;
 }
 
@@ -262,8 +262,8 @@ body {
 }
 
 .product-image {
-  width: 70%;
-  height: 70%;
+  width: 50%;
+  height: 50%;
 }
 
 .request-button {
@@ -412,7 +412,8 @@ body {
   margin-bottom: 10px;
   border-color: #9ca3af;
   border-radius: 10px;
-  height: 450px;
+  height: 200px;
+  width: 350px;
   padding: 10px;
   margin-bottom: 30px;
 }
@@ -505,16 +506,14 @@ body {
 }
 
 .delete-button {
-  position: absolute;
-  top: 5px;
-  right: 5px;
   background-color: red;
   color: white;
   border: none;
   padding: 5px 8px;
-  font-size: 30px;
+  font-size: 15px;
   cursor: pointer;
   border-radius: 4px;
+  margin-bottom: 10px;
 }
 
 .delete-button:hover {
@@ -549,6 +548,47 @@ body {
   background-color: #d5432d;
   color: white;
   padding: 10px 20px;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 400px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.action-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.cancel-button {
+  background-color: red;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.continue-button {
+  background-color: green;
+  color: white;
+  padding: 8px 16px;
   border: none;
   border-radius: 4px;
   cursor: pointer;

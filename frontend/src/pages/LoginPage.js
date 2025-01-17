@@ -4,7 +4,7 @@ import { useNavigate } from "react-router";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { auth } from "../firebaseConfig";
-import jwtDecode from "jwt-decode";
+import { jwtDecode } from "jwt-decode";
 
 const LoginPage = () => {
   const navigate = useNavigate();
@@ -35,18 +35,14 @@ const LoginPage = () => {
         email,
         password
       );
-      toast.success("Login successful!");
-
       const idToken = await userCredential.user.getIdToken();
-
       const decodedToken = jwtDecode(idToken);
-
+      toast.success("Login successful!");
       if (decodedToken.isAdmin) {
-        console.log("User is an admin.");
+        navigate("/admin/vouchers", {idToken});
       } else {
-        console.log("User is not an admin.");
+        navigate("/resident/vouchers", {idToken});
       }
-      
     } catch (error) {
       notify(error.message || "Login failed. Please try again.");
     }

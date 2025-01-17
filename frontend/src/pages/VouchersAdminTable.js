@@ -38,37 +38,30 @@ const VouchersAdminTable = (props) => {
         <thead>
           <tr>
             <th className="table-header">No.</th>
-            <th className="table-header">Voucher Requests</th>
-            <th className="table-header">Options</th>
+            <th className="table-header">Requested User</th>
+            <th className="table-header">Amount</th>
+            <th className="table-header">Status</th>
+            <th className="table-header">Actions</th>
           </tr>
         </thead>
         <tbody>
-          <td className="table-data">{num}</td>
-          <td className="table-data">{"Food and Beverages"}</td>
-          <td className="buttons-dist">
-            <button className="approve-button" onClick={() => handleApprove()}>
-              Approve
-            </button>
-            <button className="reject-button" onClick={() => handleReject()}>
-              Reject
-            </button>
-          </td>
+          {data.map((element, index) => (
+            <tr key={index}>
+              <td className="table-data">{index + 1}</td>
+              <td className="table-data">{element.name}</td>
+              <td className="table-data">${element.amount}</td>
+              <td className="table-data">{element.status}</td>
+              <td className="buttons-dist">
+                <button className="approve-button" onClick={() => handleApprove(element.id)}>
+                  Approve
+                </button>
+                <button className="reject-button" onClick={() => handleReject(element.id)}>
+                  Reject
+                </button>
+              </td>
+            </tr>
+          ))}
         </tbody>
-        {/* <tbody>
-          {data.map((element, index) => {
-            num++;
-            return (
-              <tr key={index}>
-                <td className="table-data">{num}</td>
-          <td className="table-data">{element.request}</td>
-          <td className="buttons-dist">
-            <button className="approve-button">Approve</button>
-            <button className="reject-button">Reject</button>
-          </td>
-              </tr>
-            );
-          })}
-        </tbody> */}
       </table>
     </div>
   );

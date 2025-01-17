@@ -1,8 +1,10 @@
 import { React, useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "../index.css";
+import { useLocation } from "react-router";
 
 const Products = () => {
+  const { idToken } = useLocation();
   // dummy data
   const products_file = [
     {
