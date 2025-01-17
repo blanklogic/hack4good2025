@@ -7,7 +7,7 @@ function Category({ title, items, clickedItem, onItemClick, onAddToCart }) {
       <h1 className="text-5xl font-bold">{title}</h1>
       {items.map((item) => (
         <ItemCard
-          key={item.name}
+          key={item.id}
           item={item}
           isClicked={clickedItem === item.name}
           onItemClick={() => onItemClick(item.name)}

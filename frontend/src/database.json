@@ -1,0 +1,152 @@
+[
+  [
+    {
+      "id": 1,
+      "name": "Apple",
+      "description": "Fresh red apples",
+      "price": 5,
+      "stock": 90,
+      "created_at": "2025-01-15T15:22:23.000Z",
+      "updated_at": "2025-01-16T10:16:29.000Z"
+    },
+    {
+      "id": 2,
+      "name": "Banana",
+      "description": "Ripe yellow bananas",
+      "price": 3,
+      "stock": 140,
+      "created_at": "2025-01-15T15:22:23.000Z",
+      "updated_at": "2025-01-15T15:22:37.000Z"
+    },
+    {
+      "id": 3,
+      "name": "Orange",
+      "description": "Juicy oranges",
+      "price": 4,
+      "stock": 121,
+      "created_at": "2025-01-15T15:22:23.000Z",
+      "updated_at": "2025-01-15T15:22:51.000Z"
+    },
+    {
+      "id": 4,
+      "name": "Bread",
+      "description": "Whole grain bread",
+      "price": 6,
+      "stock": 77,
+      "created_at": "2025-01-15T15:22:23.000Z",
+      "updated_at": "2025-01-15T15:22:37.000Z"
+    }
+  ],
+  [
+    {
+      "id": 5,
+      "name": "Milk",
+      "description": "1L full cream milk",
+      "price": 10,
+      "stock": 50,
+      "created_at": "2025-01-15T15:22:23.000Z",
+      "updated_at": "2025-01-15T15:22:23.000Z"
+    },
+    {
+      "id": 6,
+      "name": "Coke",
+      "description": "1.5L Coke Original",
+      "price": 8,
+      "stock": 50,
+      "created_at": "2025-01-15T15:22:23.000Z",
+      "updated_at": "2025-01-15T15:22:23.000Z"
+    },
+    {
+      "id": 7,
+      "name": "Mineral Water",
+      "description": "1.5L Mineral Water",
+      "price": 5,
+      "stock": 50,
+      "created_at": "2025-01-15T15:22:23.000Z",
+      "updated_at": "2025-01-15T15:22:23.000Z"
+    },
+    {
+      "id": 8,
+      "name": "Orange Juice",
+      "description": "1L Natural Orange Juice",
+      "price": 12,
+      "stock": 50,
+      "created_at": "2025-01-15T15:22:23.000Z",
+      "updated_at": "2025-01-15T15:22:23.000Z"
+    },
+    {
+      "id": 9,
+      "name": "Apple Juice",
+      "description": "1L Natural Apple Juice",
+      "price": 12,
+      "stock": 50,
+      "created_at": "2025-01-15T15:22:23.000Z",
+      "updated_at": "2025-01-15T15:22:23.000Z"
+    },
+    {
+      "id": 10,
+      "name": "Ice Lemon Tea",
+      "description": "1.5L Ice Lemon Tea",
+      "price": 9,
+      "stock": 50,
+      "created_at": "2025-01-15T15:22:23.000Z",
+      "updated_at": "2025-01-15T15:22:23.000Z"
+    }
+  ],
+  [
+    {
+      "id": 11,
+      "name": "Flour",
+      "description": "1kg Wheat Flour",
+      "price": 3,
+      "stock": 50,
+      "created_at": "2025-01-15T15:22:23.000Z",
+      "updated_at": "2025-01-15T15:22:23.000Z"
+    },
+    {
+      "id": 12,
+      "name": "White Rice",
+      "description": "2kg White Rice",
+      "price": 7,
+      "stock": 50,
+      "created_at": "2025-01-15T15:22:23.000Z",
+      "updated_at": "2025-01-15T15:22:23.000Z"
+    },
+    {
+      "id": 13,
+      "name": "Mineral Salt",
+      "description": "500g Mineral Salt",
+      "price": 2,
+      "stock": 50,
+      "created_at": "2025-01-15T15:22:23.000Z",
+      "updated_at": "2025-01-15T15:22:23.000Z"
+    },
+    {
+      "id": 14,
+      "name": "Cane Sugar",
+      "description": "500g Can Sugar",
+      "price": 2,
+      "stock": 50,
+      "created_at": "2025-01-15T15:22:23.000Z",
+      "updated_at": "2025-01-15T15:22:23.000Z"
+    },
+    {
+      "id": 15,
+      "name": "Sunflower Oil",
+      "description": "3L Sunflower Oil",
+      "price": 5,
+      "stock": 50,
+      "created_at": "2025-01-15T15:22:23.000Z",
+      "updated_at": "2025-01-15T15:22:23.000Z"
+    },
+    {
+      "id": 16,
+      "name": "Canola Oil",
+      "description": "3L Canola Oil",
+      "price": 6,
+      "stock": 50,
+      "created_at": "2025-01-15T15:22:23.000Z",
+      "updated_at": "2025-01-15T15:22:23.000Z"
+    }
+  ]
+]
