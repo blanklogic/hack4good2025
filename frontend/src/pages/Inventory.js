@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from "react";
-import "../index.css";
-import axios from "axios";
+import React, { useEffect, useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import "../index.css";
 
 const Inventory = () => {
   const [products, setProducts] = useState([]);
@@ -22,8 +21,9 @@ const Inventory = () => {
       name: "Bread",
       description: "Fluffy Bread full of Fibre, Omega3 and Iron",
       quantity: 10,
-      price: 2.80,
-      image: "https://hack-4-good-temp.s3.ap-southeast-1.amazonaws.com/bread.jpg",
+      price: 2.8,
+      image:
+        "https://hack-4-good-temp.s3.ap-southeast-1.amazonaws.com/bread.jpg",
       requested: false,
     },
     {
@@ -31,8 +31,9 @@ const Inventory = () => {
       name: "Milk",
       description: "High Calcium Low Fat Milk",
       quantity: 5,
-      price: 5.50,
-      image: "https://hack-4-good-temp.s3.ap-southeast-1.amazonaws.com/milk.jpg",
+      price: 5.5,
+      image:
+        "https://hack-4-good-temp.s3.ap-southeast-1.amazonaws.com/milk.jpg",
       requested: false,
     },
     {
@@ -41,7 +42,8 @@ const Inventory = () => {
       description: "Juicy red apples filled with great vitamins",
       quantity: 20,
       price: 3.35,
-      image: "https://hack-4-good-temp.s3.ap-southeast-1.amazonaws.com/apple.jpg",
+      image:
+        "https://hack-4-good-temp.s3.ap-southeast-1.amazonaws.com/apple.jpg",
       requested: false,
     },
     {
@@ -50,9 +52,10 @@ const Inventory = () => {
       description: "Bananas perfect for digestion",
       quantity: 40,
       price: 3.95,
-      image: "https://hack-4-good-temp.s3.ap-southeast-1.amazonaws.com/banana.jpg",
+      image:
+        "https://hack-4-good-temp.s3.ap-southeast-1.amazonaws.com/banana.jpg",
       requested: false,
-    }
+    },
   ];
 
   useEffect(() => {
@@ -152,10 +155,7 @@ const Inventory = () => {
         prev.map((p) => (p.id === currentProduct.id ? { ...p, ...product } : p))
       );
     } else {
-      setProducts((prev) => [
-        ...prev,
-        { ...product, id: prev.length + 1 },
-      ]);
+      setProducts((prev) => [...prev, { ...product, id: prev.length + 1 }]);
     }
 
     toast.success("Product saved successfully!");
@@ -169,7 +169,7 @@ const Inventory = () => {
       <div className="ml-12 flex justify-between">
         <h1 className="text-5xl font-bold">Inventory</h1>
         <button
-          className="bg-[#d5432d] text-white p-2 rounded cursor-pointer hover:bg-[#2b3491] mr-8"
+          className="bg-[#d5432d] text-white py-2 px-4 rounded cursor-pointer transition-transform hover:scale-105 hover:bg-[#2b3491] mr-8"
           onClick={handleAddProduct}
         >
           Add Product
@@ -187,15 +187,15 @@ const Inventory = () => {
             <p>{product.description}</p>
             <p>Quantity: {product.quantity}</p>
             <p>Price: ${product.price.toFixed(2)}</p>
-            <div className="product-actions space-x-4">
+            <div className="product-actions space-x-4 mt-4">
               <button
-                className="bg-yellow-500 text-white p-2 rounded cursor-pointer hover:bg-yellow-700"
+                className="bg-yellow-500 text-white px-4 py-1 rounded cursor-pointer transition-transform hover:scale-105 hover:bg-yellow-700"
                 onClick={() => handleEditProduct(product)}
               >
                 Edit
               </button>
               <button
-                className="bg-red-500 text-white p-2 rounded cursor-pointer hover:bg-red-700"
+                className="bg-red-500 text-white px-4 py-1 rounded cursor-pointer transition-transform hover:scale-105 hover:bg-red-700"
                 onClick={() => handleDeleteProduct(product.id)}
               >
                 Delete
@@ -250,7 +250,7 @@ const Inventory = () => {
                     className="preview-image"
                   />
                   <button
-                    className="delete-button"
+                    className="delete-button transition-transform hover:scale-105"
                     onClick={handleDeleteImage}
                   >
                     X
@@ -266,13 +266,13 @@ const Inventory = () => {
             </div>
             <div className="action-buttons">
               <button
-                className="cancel-button"
+                className="cancel-button transition-transform hover:scale-105 hover:bg-red-800"
                 onClick={() => setIsModalOpen(false)}
               >
                 Cancel
               </button>
               <button
-                className="continue-button"
+                className="continue-button transition-transform hover:scale-105"
                 onClick={handleSubmit}
               >
                 Save
