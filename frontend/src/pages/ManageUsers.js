@@ -1,9 +1,16 @@
 import React, { useState } from "react";
 import "../index.css";
 import ManageUsersTable from "./ManageUsersTable";
+import ManageUserModal from "./ManageUserModal";
 
 const ManageUsers = () => {
-  const [Users, setUsers] = useState([]);
+  const [users, setUsers] = useState([]);
+  const [isAddModalOpen, setAddModalOpen] = useState(false);
+
+  const handleAddUser = (newUser) => {
+    setUsers((prevUsers) => [...prevUsers, newUser]);
+    setAddModalOpen(false);
+  };
 
   return (
     <div className="mt-14 ml-96 pl-24">
@@ -18,10 +25,21 @@ const ManageUsers = () => {
             />
             <button className="search-user-button">Search</button>
           </div>
-          <button className="add-user-button">Add User</button>
+          <button
+            className="add-user-button"
+            onClick={() => setAddModalOpen(true)}
+          >
+            Add User
+          </button>
         </div>
-        {/* <ManageUsersTable tableData={Users} /> */}
-        <ManageUsersTable />
+        <ManageUsersTable tableData={users} />
+        {isAddModalOpen && (
+          <ManageUserModal
+            isOpen={isAddModalOpen}
+            onClose={() => setAddModalOpen(false)}
+            onSave={handleAddUser}
+          />
+        )}
       </div>
     </div>
   );

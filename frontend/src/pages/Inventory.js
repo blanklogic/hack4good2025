@@ -19,22 +19,40 @@ const Inventory = () => {
   const mockData = [
     {
       id: 1,
-      name: "Product 1",
-      description: "Description for Product 1",
+      name: "Bread",
+      description: "Fluffy Bread full of Fibre, Omega3 and Iron",
       quantity: 10,
-      price: 25.99,
-      image: "https://via.placeholder.com/150",
+      price: 2.80,
+      image: "https://hack-4-good-temp.s3.ap-southeast-1.amazonaws.com/bread.jpg",
       requested: false,
     },
     {
       id: 2,
-      name: "Product 2",
-      description: "Description for Product 2",
+      name: "Milk",
+      description: "High Calcium Low Fat Milk",
       quantity: 5,
-      price: 10.49,
-      image: "https://via.placeholder.com/150",
+      price: 5.50,
+      image: "https://hack-4-good-temp.s3.ap-southeast-1.amazonaws.com/milk.jpg",
       requested: false,
     },
+    {
+      id: 3,
+      name: "Bag of Apples",
+      description: "Juicy red apples filled with great vitamins",
+      quantity: 20,
+      price: 3.35,
+      image: "https://hack-4-good-temp.s3.ap-southeast-1.amazonaws.com/apple.jpg",
+      requested: false,
+    },
+    {
+      id: 4,
+      name: "Bunch of Bananas",
+      description: "Bananas perfect for digestion",
+      quantity: 40,
+      price: 3.95,
+      image: "https://hack-4-good-temp.s3.ap-southeast-1.amazonaws.com/banana.jpg",
+      requested: false,
+    }
   ];
 
   useEffect(() => {
