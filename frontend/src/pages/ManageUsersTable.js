@@ -96,7 +96,7 @@ const ManageUsersTable = (props) => {
                 <td className="table-data">{user.last_login}</td>
                 <td className="table-data">
                   <button
-                    className="manage-button"
+                    className="manage-button transition-transform hover:scale-105"
                     onClick={() => handleManageUserClick(user)}
                   >
                     Manage User

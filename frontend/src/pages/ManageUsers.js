@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "../index.css";
-import ManageUsersTable from "./ManageUsersTable";
 import ManageUserModal from "./ManageUserModal";
+import ManageUsersTable from "./ManageUsersTable";
 
 const ManageUsers = () => {
   const [users, setUsers] = useState([]);
@@ -13,20 +13,22 @@ const ManageUsers = () => {
   };
 
   return (
-    <div className="mt-14 ml-96 pl-24">
+    <div className="manage-users mt-32 ml-96 pl-24">
       <div className="ml-12">
         <h1 className="text-5xl font-bold">Manage Users</h1>
         <div className="flex justify-between">
-          <div className="flex items-center mt-8 border-b-2 border-gray-300">
+          <div className="flex items-center justify-between mt-8 border-b-2 border-gray-300">
             <input
               type="text"
               placeholder="Search for residents..."
-              className="search-input"
+              className="search-input my-auto"
             />
-            <button className="search-user-button">Search</button>
+            <button className="search-user-button transition-transform hover:scale-105">
+              Search
+            </button>
           </div>
           <button
-            className="add-user-button"
+            className="add-user-button transition-transform hover:scale-105"
             onClick={() => setAddModalOpen(true)}
           >
             Add User
