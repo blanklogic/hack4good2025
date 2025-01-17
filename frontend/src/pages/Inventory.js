@@ -4,6 +4,59 @@ import { useNavigate } from "react-router";
 import { ToastContainer, toast } from "react-toastify";
 
 const Inventory = () => {
+  // dummy data
+  const products_file = [
+    {
+      id: 1,
+      name: "Organic Almonds",
+      description: "Raw, organic almonds ideal for snacking and cooking",
+      price: 15.0,
+      stock: 20,
+      image: "https://via.placeholder.com/150?text=Organic+Almonds",
+      requested: false,
+    },
+    {
+      id: 2,
+      name: "Extra Virgin Olive Oil",
+      description:
+        "Cold-pressed, high-quality extra virgin olive oil for cooking and dressing",
+      price: 10.0,
+      stock: 30,
+      image: "https://via.placeholder.com/150?text=Extra+Virgin+Olive+Oil",
+      requested: false,
+    },
+    {
+      id: 3,
+      name: "Sparkling Water",
+      description:
+        "Refreshing and fizzy sparkling water, perfect for any time of the day",
+      price: 5.0,
+      stock: 0,
+      image: "https://via.placeholder.com/150?text=Sparkling+Water",
+      requested: false,
+    },
+    {
+      id: 4,
+      name: "Whole Wheat Pasta",
+      description:
+        "Nutritious whole wheat pasta, a great source of energy and fiber",
+      price: 4.0,
+      stock: 25,
+      image: "https://via.placeholder.com/150?text=Whole+Wheat+Pasta",
+      requested: false,
+    },
+    {
+      id: 5,
+      name: "Organic Tomato Sauce",
+      description:
+        "Rich and flavorful organic tomato sauce, perfect for pastas and pizzas",
+      price: 8.0,
+      stock: 15,
+      image: "https://via.placeholder.com/150?text=Organic+Tomato+Sauce",
+      requested: false,
+    },
+  ];
+
   const navigate = useNavigate();
   const [currentStep, setCurrentStep] = useState(0);
 
@@ -102,17 +155,20 @@ const Inventory = () => {
     switch (currentStep) {
       case 0: // Inventory page
         return (
-          <div className="grid-container">
-            <div className="product-card">
-              <img
-                src="https://via.placeholder.com/150"
-                alt="product"
-                className="product-image"
-              />
-              <h3>Product Name</h3>
-              <p>Product Description</p>
-              <p>Stock Available: 10</p>
-            </div>
+          <div className="ml-12 grid-container">
+            {products_file.map((product) => (
+              <div key={product.id} className="product-card">
+                <img
+                  src={product.image}
+                  alt={product.name}
+                  className="product-image"
+                />
+                <h3 className="font-bold">{product.name}</h3>
+                <p>{product.description}</p>
+                <p>Price: ${product.price.toFixed(2)}</p>
+                <p>Stock Available: {product.stock}</p>
+              </div>
+            ))}
           </div>
         );
       case 1: // Title and Desc

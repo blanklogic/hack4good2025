@@ -20,7 +20,8 @@ const ManageUsers = () => {
           </div>
           <button className="add-user-button">Add User</button>
         </div>
-        <ManageUsersTable tableData={Users} />
+        {/* <ManageUsersTable tableData={Users} /> */}
+        <ManageUsersTable />
       </div>
     </div>
   );
