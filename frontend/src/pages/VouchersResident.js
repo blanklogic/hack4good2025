@@ -88,7 +88,7 @@ const VouchersResident = () => {
     setCartItems((prevItems) => ({
       ...prevItems,
       [itemName]: prevItems[itemName]
-        ? prevItems[itemName] + itemQuantity
+        ? Number(prevItems[itemName]) + itemQuantity
         : itemQuantity,
     }));
   };
