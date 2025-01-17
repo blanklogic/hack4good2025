@@ -28,7 +28,7 @@ export async function saveProduct(product) {
     console.log(`Image uploaded successfully: ${fileName}`);
     return { message: "Product saved successfully.", fileName };
   } catch (error) {
-    console.error("Error saving product:", error.message);
+    console.error("Error saving product:",);
     throw new Error("Failed to save product.");
   }
 }
