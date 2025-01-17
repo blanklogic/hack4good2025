@@ -1,6 +1,6 @@
 import { React, useState } from "react";
-import "../index.css";
 import { ToastContainer, toast } from "react-toastify";
+import "../index.css";
 
 const VouchersAdminTable = (props) => {
   let data = props.tableData;
@@ -52,10 +52,16 @@ const VouchersAdminTable = (props) => {
               <td className="table-data">${element.amount}</td>
               <td className="table-data">{element.status}</td>
               <td className="buttons-dist">
-                <button className="approve-button" onClick={() => handleApprove(element.id)}>
+                <button
+                  className="approve-button hover:bg-green-900 hover:scale-105 transition-transform"
+                  onClick={() => handleApprove(element.id)}
+                >
                   Approve
                 </button>
-                <button className="reject-button" onClick={() => handleReject(element.id)}>
+                <button
+                  className="reject-button hover:bg-red-700 hover:scale-105 transition-transform"
+                  onClick={() => handleReject(element.id)}
+                >
                   Reject
                 </button>
               </td>

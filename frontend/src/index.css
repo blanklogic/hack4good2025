@@ -271,14 +271,18 @@ body {
   background-color: #d5432d;
   color: white;
   border: none;
-  padding: 10px;
+  margin-top: 0.5rem;
+  padding: 0.25rem 1rem;
   border-radius: 5px;
   cursor: pointer;
   justify-self: right;
+  font-size: 1.6rem;
+  transition: transform 0.2s ease-in-out;
 }
 
 .request-button:hover {
   background-color: #2b3491;
+  transform: scale(1.03);
 }
 
 .buttons-dist {
@@ -679,6 +683,7 @@ body {
   margin-bottom: 10px;
   justify-content: flex-end;
 }
+
 .item-cart-container {
   background-color: gray;
   width: calc(100% - 30rem);
@@ -758,5 +763,14 @@ body {
 
 .transaction-history-resident h1 {
   margin-top: 8rem;
+  color: #d5432d;
+}
+
+.available-products h1 {
+  color: #d5432d;
+}
+
+/* Admin Classes */
+.vouchers-admin h1 {
   color: #d5432d;
 }

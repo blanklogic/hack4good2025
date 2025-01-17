@@ -1,7 +1,7 @@
 import { React, useContext, useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
-import "../index.css";
 import { AuthContext } from "../AuthContext";
+import "../index.css";
 
 const Products = () => {
   const { idToken } = useContext(AuthContext);
@@ -99,8 +99,8 @@ const Products = () => {
   };
 
   return (
-    <div className="mt-14 ml-96 pl-24">
-      <div className="ml-12 flex justify-between">
+    <div className="mt-32 ml-96 pl-32 pr-8">
+      <div className="available-products ml-12 flex justify-between">
         <h1 className="text-5xl font-bold">Available Products</h1>
         <input
           type="text"

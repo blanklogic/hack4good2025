@@ -1,4 +1,3 @@
-import axios from "axios";
 import { useEffect, useState } from "react";
 import "../index.css";
 import VouchersAdminTable from "./VouchersAdminTable";
@@ -20,7 +19,7 @@ const VouchersAdmin = () => {
   }, []);
 
   return (
-    <section className="ml-96 pl-24">
+    <section className="vouchers-admin mt-32 ml-96 pl-36 pr-12">
       <header className="text-center mt-10">
         <h1 className="text-5xl font-bold">Voucher Requests</h1>
       </header>
